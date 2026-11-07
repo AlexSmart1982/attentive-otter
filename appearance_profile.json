@@ -1,0 +1,23 @@
+{
+  "schema": "rgb96x72-blur0.8-block4x3-v1",
+  "score": "1 - minimum RGB RMSE over rotations",
+  "status": "experimental_with_manual_review_labels",
+  "threshold": 0.992443323135376,
+  "review_threshold": 0.97,
+  "thumbnail_width": 72,
+  "thumbnail_height": 96,
+  "blur_sigma": 0.8,
+  "coarse_columns": 3,
+  "coarse_rows": 4,
+  "candidate_index": "ckdtree_gray12",
+  "training_sources": 32,
+  "validation_sources": 12,
+  "held_out_sources": 16,
+  "held_out_pair_recall": 1.0,
+  "held_out_false_positive_pairs": 0,
+  "scope": "Provisional calibration on generated compression, format and rotation versions of this photo collection. No mirrors or crops.",
+  "known_limitations": [
+    "Manually reviewed copy candidates overlap burst frames on the scalar score; their labels are working judgements rather than verified same-exposure identities.",
+    "Whether to retain an image is a separate user decision, including for adjacent exposures."
+  ]
+}

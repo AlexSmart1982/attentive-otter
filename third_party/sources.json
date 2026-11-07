@@ -1,0 +1,241 @@
+{
+  "archives": [
+    {
+      "component": "PyQt5",
+      "version": "5.15.11",
+      "file": "PyQt5-5.15.11.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz",
+      "expected_sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52",
+      "sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52",
+      "bytes": 3216775
+    },
+    {
+      "component": "PyQt5-sip",
+      "version": "12.17.1",
+      "file": "pyqt5_sip-12.17.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ea/08/88a20c862f40b5c178c517cdc7e93767967dec5ac1b994e226d517991c9b/pyqt5_sip-12.17.1.tar.gz",
+      "expected_sha256": "0eab72bcb628f1926bf5b9ac51259d4fa18e8b2a81d199071135458f7d087ea8",
+      "sha256": "0eab72bcb628f1926bf5b9ac51259d4fa18e8b2a81d199071135458f7d087ea8",
+      "bytes": 104136
+    },
+    {
+      "component": "numpy",
+      "version": "2.2.6",
+      "file": "numpy-2.2.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/76/21/7d2a95e4bba9dc13d043ee156a356c0a8f0c6309dff6b21b4d71a073b8a8/numpy-2.2.6.tar.gz",
+      "expected_sha256": "e29554e2bef54a90aa5cc07da6ce955accb83f21ab5de01a62c8478897b264fd",
+      "sha256": "e29554e2bef54a90aa5cc07da6ce955accb83f21ab5de01a62c8478897b264fd",
+      "bytes": 20276440
+    },
+    {
+      "component": "scipy",
+      "version": "1.16.2",
+      "file": "scipy-1.16.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/4c/3b/546a6f0bfe791bbb7f8d591613454d15097e53f906308ec6f7c1ce588e8e/scipy-1.16.2.tar.gz",
+      "expected_sha256": "af029b153d243a80afb6eabe40b0a07f8e35c9adc269c019f364ad747f826a6b",
+      "sha256": "af029b153d243a80afb6eabe40b0a07f8e35c9adc269c019f364ad747f826a6b",
+      "bytes": 30580599
+    },
+    {
+      "component": "opencv-python",
+      "version": "4.12.0.88",
+      "file": "opencv-python-4.12.0.88.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ac/71/25c98e634b6bdeca4727c7f6d6927b056080668c5008ad3c8fc9e7f8f6ec/opencv-python-4.12.0.88.tar.gz",
+      "expected_sha256": "8b738389cede219405f6f3880b851efa3415ccd674752219377353f017d2994d",
+      "sha256": "8b738389cede219405f6f3880b851efa3415ccd674752219377353f017d2994d",
+      "bytes": 95373294
+    },
+    {
+      "component": "Pillow",
+      "version": "11.3.0",
+      "file": "pillow-11.3.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f3/0d/d0d6dea55cd152ce3d6767bb38a8fc10e33796ba4ba210cbab9354b6d238/pillow-11.3.0.tar.gz",
+      "expected_sha256": "3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523",
+      "sha256": "3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523",
+      "bytes": 47113069
+    },
+    {
+      "component": "pillow-heif",
+      "version": "1.1.1",
+      "file": "pillow_heif-1.1.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/64/65/77284daf2a8a2849b9040889bd8e1b845e693ed97973a28ba2122b8922ad/pillow_heif-1.1.1.tar.gz",
+      "expected_sha256": "f60e8c8a8928556104cec4fff39d43caa1da105625bdb53b11ce3c89d09b6bde",
+      "sha256": "f60e8c8a8928556104cec4fff39d43caa1da105625bdb53b11ce3c89d09b6bde",
+      "bytes": 18271952
+    },
+    {
+      "component": "piexif",
+      "version": "1.1.3",
+      "file": "piexif-1.1.3.zip",
+      "url": "https://files.pythonhosted.org/packages/fa/84/a3f25cec7d0922bf60be8000c9739d28d24b6896717f44cc4cfb843b1487/piexif-1.1.3.zip",
+      "expected_sha256": "83cb35c606bf3a1ea1a8f0a25cb42cf17e24353fd82e87ae3884e74a302a5f1b",
+      "sha256": "83cb35c606bf3a1ea1a8f0a25cb42cf17e24353fd82e87ae3884e74a302a5f1b",
+      "bytes": 1011134
+    },
+    {
+      "component": "psutil",
+      "version": "7.1.0",
+      "file": "psutil-7.1.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/b3/31/4723d756b59344b643542936e37a31d1d3204bcdc42a7daa8ee9eb06fb50/psutil-7.1.0.tar.gz",
+      "expected_sha256": "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2",
+      "sha256": "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2",
+      "bytes": 497660
+    },
+    {
+      "component": "PyInstaller",
+      "version": "6.16.0",
+      "file": "pyinstaller-6.16.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/94/94/1f62e95e4a28b64cfbb5b922ef3046f968b47170d37a1e1a029f56ac9cb4/pyinstaller-6.16.0.tar.gz",
+      "expected_sha256": "53559fe1e041a234f2b4dcc3288ea8bdd57f7cad8a6644e422c27bb407f3edef",
+      "sha256": "53559fe1e041a234f2b4dcc3288ea8bdd57f7cad8a6644e422c27bb407f3edef",
+      "bytes": 4008473
+    },
+    {
+      "component": "qtbase",
+      "version": "5.15.2",
+      "file": "qtbase-everywhere-src-5.15.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.2/submodules/qtbase-everywhere-src-5.15.2.tar.xz",
+      "expected_sha256": "909fad2591ee367993a75d7e2ea50ad4db332f05e1c38dd7a5a274e156a4e0f8",
+      "sha256": "909fad2591ee367993a75d7e2ea50ad4db332f05e1c38dd7a5a274e156a4e0f8",
+      "bytes": 50179672
+    },
+    {
+      "component": "qtdeclarative",
+      "version": "5.15.2",
+      "file": "qtdeclarative-everywhere-src-5.15.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.2/submodules/qtdeclarative-everywhere-src-5.15.2.tar.xz",
+      "expected_sha256": "c600d09716940f75d684f61c5bdaced797f623a86db1627da599027f6c635651",
+      "sha256": "c600d09716940f75d684f61c5bdaced797f623a86db1627da599027f6c635651",
+      "bytes": 21559880
+    },
+    {
+      "component": "qtimageformats",
+      "version": "5.15.2",
+      "file": "qtimageformats-everywhere-src-5.15.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.2/submodules/qtimageformats-everywhere-src-5.15.2.tar.xz",
+      "expected_sha256": "bf8285c7ce04284527ab823ddc7cf48a1bb79131db3a7127342167f4814253d7",
+      "sha256": "bf8285c7ce04284527ab823ddc7cf48a1bb79131db3a7127342167f4814253d7",
+      "bytes": 1806740
+    },
+    {
+      "component": "qtsvg",
+      "version": "5.15.2",
+      "file": "qtsvg-everywhere-src-5.15.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.2/submodules/qtsvg-everywhere-src-5.15.2.tar.xz",
+      "expected_sha256": "8bc3c2c1bc2671e9c67d4205589a8309b57903721ad14c60ea21a5d06acb585e",
+      "sha256": "8bc3c2c1bc2671e9c67d4205589a8309b57903721ad14c60ea21a5d06acb585e",
+      "bytes": 1886268
+    },
+    {
+      "component": "qtwebsockets",
+      "version": "5.15.2",
+      "file": "qtwebsockets-everywhere-src-5.15.2.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.2/submodules/qtwebsockets-everywhere-src-5.15.2.tar.xz",
+      "expected_sha256": "a0b42d85dd34ff6e2d23400e02f83d8b85bcd80e60efd1521d12d9625d4a233f",
+      "sha256": "a0b42d85dd34ff6e2d23400e02f83d8b85bcd80e60efd1521d12d9625d4a233f",
+      "bytes": 259000
+    },
+    {
+      "component": "CPython",
+      "version": "3.13.8",
+      "file": "Python-3.13.8.tar.xz",
+      "url": "https://www.python.org/ftp/python/3.13.8/Python-3.13.8.tar.xz",
+      "sha256": "b9910730526b298299b46b35595ced9055722df60c06ad6301f6a4e2c728a252",
+      "bytes": 22681576
+    },
+    {
+      "component": "pywin32",
+      "version": "311",
+      "file": "pywin32-b311.tar.gz",
+      "url": "https://codeload.github.com/mhammond/pywin32/tar.gz/refs/tags/b311",
+      "sha256": "4ae3f0d4adacc331733fe1204f7f93b8654615ca325adfc9eb6c67198246a91b",
+      "bytes": 4753827
+    },
+    {
+      "component": "pillow-heif-build-recipes",
+      "version": "1.1.1",
+      "file": "pillow-heif-v1.1.1-upstream.tar.gz",
+      "url": "https://codeload.github.com/bigcat88/pillow_heif/tar.gz/refs/tags/v1.1.1",
+      "sha256": "30002bb1dabc6c020369defcc2dfb5879b0c0621e999668976e232326d3f4452",
+      "bytes": 27745219
+    },
+    {
+      "component": "libheif",
+      "version": "1.20.2",
+      "file": "libheif-1.20.2.tar.gz",
+      "url": "https://github.com/strukturag/libheif/releases/download/v1.20.2/libheif-1.20.2.tar.gz",
+      "sha256": "68ac9084243004e0ef3633f184eeae85d615fe7e4444373a0a21cebccae9d12a",
+      "bytes": 1787518
+    },
+    {
+      "component": "libde265",
+      "version": "1.0.16",
+      "file": "libde265-1.0.16.tar.gz",
+      "url": "https://github.com/strukturag/libde265/releases/download/v1.0.16/libde265-1.0.16.tar.gz",
+      "sha256": "b92beb6b53c346db9a8fae968d686ab706240099cdd5aff87777362d668b0de7",
+      "bytes": 835657
+    },
+    {
+      "component": "x265",
+      "version": "4.1+1-1d117be",
+      "file": "x265-1d117be.tar.gz",
+      "url": "https://bitbucket.org/multicoreware/x265_git/get/1d117be.tar.gz",
+      "sha256": "7d23cdcdbd510728202c0dfbf7c51eda26a395de2096c504c2b10d6035711102",
+      "bytes": 1726307
+    },
+    {
+      "component": "FFmpeg",
+      "version": "4.4.6",
+      "file": "ffmpeg-4.4.6.tar.gz",
+      "url": "https://codeload.github.com/FFmpeg/FFmpeg/tar.gz/refs/tags/n4.4.6",
+      "sha256": "9cdeaab9ddc0c0ddb63bad319adc977eba8ac946b15d5b4d9635222d8ba27a8b",
+      "bytes": 13744362
+    },
+    {
+      "component": "OpenCV-FFmpeg-build-recipes",
+      "version": "ea9240e39bc0d6a69d2b1f0ba4513bdc7612a41e",
+      "file": "opencv-ffmpeg-build-recipes.tar.gz",
+      "url": "https://codeload.github.com/opencv/opencv_3rdparty/tar.gz/ea9240e39bc0d6a69d2b1f0ba4513bdc7612a41e",
+      "sha256": "bd0d7325be7bf6c83d637b19527e7e8294cf4c83d87c6a9ae4f37054e0f79c04",
+      "bytes": 22590591
+    },
+    {
+      "component": "libvpx",
+      "version": "1.15.2",
+      "file": "libvpx-1.15.2.tar.gz",
+      "url": "https://codeload.github.com/webmproject/libvpx/tar.gz/refs/tags/v1.15.2",
+      "sha256": "26fcd3db88045dee380e581862a6ef106f49b74b6396ee95c2993a260b4636aa",
+      "bytes": 5630368
+    },
+    {
+      "component": "libaom",
+      "version": "3.12.1",
+      "file": "libaom-3.12.1.tar.gz",
+      "url": "https://aomedia.googlesource.com/aom/+archive/refs/tags/v3.12.1.tar.gz",
+      "sha256": "a5a7b51be786de70aebaa6ae7c83995e825072a6ab952d456e8d88fcdb66277a",
+      "bytes": 5559604
+    },
+    {
+      "component": "OpenH264",
+      "version": "1.8.0",
+      "file": "openh264-1.8.0.tar.gz",
+      "url": "https://codeload.github.com/cisco/openh264/tar.gz/refs/tags/v1.8.0",
+      "sha256": "08670017fd0bb36594f14197f60bebea27b895511251c7c64df6cd33fc667d34",
+      "bytes": 38695675
+    }
+  ],
+  "heif_runtime": {
+    "libheif": "1.20.2",
+    "HEIF": "x265 HEVC encoder (4.1+1-1d117be)",
+    "AVIF": "",
+    "encoders": {
+      "x265": "x265 HEVC encoder (4.1+1-1d117be)",
+      "mask": "mask"
+    },
+    "decoders": {
+      "libde265": "libde265 HEVC decoder, version 1.0.16"
+    }
+  },
+  "ffmpeg_dll_sha256": "a0f01e4ee5e97b4a513cd70f01fafadc0dd187ba5d1293cb7fc6b77e7d17c631",
+  "ffmpeg_build_revision": "ea9240e39bc0d6a69d2b1f0ba4513bdc7612a41e"
+}

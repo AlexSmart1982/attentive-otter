@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1600" viewBox="0 0 1200 800">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#91bed1"/><stop offset="1" stop-color="#f7dcc0"/></linearGradient>
+<linearGradient id="lake" x2="0" y2="1"><stop stop-color="#7ca9b2"/><stop offset="1" stop-color="#254e62"/></linearGradient></defs>
+<rect width="1200" height="800" fill="url(#sky)"/><circle cx="928" cy="163" r="61" fill="#fff0cc"/>
+<path d="M0 411L155 227 280 340 461 120 641 327 784 191 985 357 1120 236 1200 338V570H0Z" fill="#7593a3"/>
+<path d="M315 300L461 120 562 252 482 216 455 250 427 217 399 262Z" fill="#eef3ed"/>
+<path d="M672 293L784 191 875 289 806 256 787 279 762 247 725 281Z" fill="#e1ece9"/>
+<path d="M0 403L145 327 274 416 420 301 585 411 731 335 940 447 1080 352 1200 411V585H0Z" fill="#4f7681"/>
+<path d="M0 485Q260 443 490 489T990 477L1200 457V800H0Z" fill="url(#lake)"/>
+<path d="M448 498Q620 475 870 496M325 543Q565 520 998 545M479 587Q688 567 1080 594M604 641Q790 625 1115 650" fill="none" stroke="#e5d7b5" stroke-width="4" opacity=".55"/>
+<path d="M0 442Q120 424 214 488L372 535 260 560 109 538 0 568Z" fill="#355c5b"/>
+<path d="M1200 458L1097 476 1031 506 1144 501 1200 521Z" fill="#42675c"/>
+<path d="M0 687Q145 635 280 725L454 800H0Z" fill="#203f3c"/>
+<path d="M1200 652Q1095 666 1020 741L929 800H1200Z" fill="#254744"/>
+<g transform="translate(43 625) scale(1.5)"><path d="M-5 30V-130H5V30Z" fill="#223b36"/><path d="M0-175L-40-99H-20L-52-49H-28L-65 5H65L28-49H52L20-99H40Z" fill="#234d42"/></g><g transform="translate(128 610) scale(1.1)"><path d="M-5 30V-130H5V30Z" fill="#223b36"/><path d="M0-175L-40-99H-20L-52-49H-28L-65 5H65L28-49H52L20-99H40Z" fill="#234d42"/></g><g transform="translate(212 684) scale(0.9)"><path d="M-5 30V-130H5V30Z" fill="#223b36"/><path d="M0-175L-40-99H-20L-52-49H-28L-65 5H65L28-49H52L20-99H40Z" fill="#234d42"/></g><g transform="translate(1140 647) scale(1.3)"><path d="M-5 30V-130H5V30Z" fill="#223b36"/><path d="M0-175L-40-99H-20L-52-49H-28L-65 5H65L28-49H52L20-99H40Z" fill="#234d42"/></g><g transform="translate(1070 724) scale(0.85)"><path d="M-5 30V-130H5V30Z" fill="#223b36"/><path d="M0-175L-40-99H-20L-52-49H-28L-65 5H65L28-49H52L20-99H40Z" fill="#234d42"/></g></svg>

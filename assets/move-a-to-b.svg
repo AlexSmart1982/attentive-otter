@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 344 124">
+ <g fill="none" stroke="#89949b" stroke-width="1.6" stroke-linejoin="round">
+  <path d="M14 95V38a5 5 0 0 1 5-5h28l9 10h45a5 5 0 0 1 5 5v47Z"/>
+  <path d="M226 95V38a5 5 0 0 1 5-5h28l9 10h57a5 5 0 0 1 5 5v47Z"/>
+  <rect x="44" y="51" width="28" height="32" rx="3" stroke="#6d8f75"/>
+  <rect x="241" y="51" width="28" height="32" rx="3" stroke="#6d8f75"/>
+  <rect x="291" y="51" width="28" height="32" rx="3"/>
+  <path d="M80 67h152m-9-8 9 8-9 8" stroke="#6d8f75" stroke-width="2" stroke-linecap="round"/>
+  <path d="m288 49 34 36m0-36-34 36" stroke="#b16c64" stroke-width="2" stroke-linecap="round"/>
+ </g>
+ <g font-family="Segoe UI, Arial" font-size="15" font-weight="600" text-anchor="middle">
+  <text x="58" y="73" fill="#6d8f75">A</text><text x="255" y="73" fill="#6d8f75">A</text><text x="305" y="73" fill="#89949b">B</text>
+ </g>
+ <g font-family="Segoe UI, Arial" font-size="12" text-anchor="middle" fill="#89949b">
+  <text x="60" y="116">Папка A</text><text x="278" y="116">Папка B</text>
+ </g>
+</svg>

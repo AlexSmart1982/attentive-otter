@@ -1,0 +1,24 @@
+Attentive Otter
+Copyright (C) 2026 Скрябин Александр
+Contact: alexsmart@yandex.ru
+
+The original application code in this project is licensed under the GNU
+General Public License, version 3 only (SPDX-License-Identifier: GPL-3.0-only).
+See the accompanying LICENSE file for the complete license text.
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation, version 3.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program. If not, see https://www.gnu.org/licenses/.
+
+Third-party components retain their own copyright notices and licenses.
+This notice does not replace the licenses of Python, PyQt, Qt, image codecs,
+or other third-party dependencies. Their distribution obligations must
+also be satisfied when packaging and distributing the application.

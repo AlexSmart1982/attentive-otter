@@ -1,0 +1,69 @@
+{
+  "source_root": "test_examples",
+  "collage": "experiments/archive_neighbours_097/neighbour_groups.jpg",
+  "relation_values": ["copy_candidate", "burst", "unrelated", "unknown"],
+  "note": "Exposure relation and archive retention are independent. Retention decisions belong to individual files. An image from a burst may be removed by user choice without becoming a same-frame copy.",
+  "retention_decisions": {},
+  "pairs": [
+    {
+      "id": 1,
+      "path1": "IMG_8481.HEIC",
+      "path2": "IRGG0276.JPG",
+      "relation": "copy_candidate",
+      "confidence": "confirmed",
+      "exposure_relation": "same_frame",
+      "confirmed_by": "user",
+      "evidence": "Latest user inspection confirmed a full copy with a uniform 1-2 pixel displacement. Earlier provisional descriptions are superseded. The cause of displacement is unverified."
+    },
+    {
+      "id": 2,
+      "path1": "IMG_8519.HEIC",
+      "path2": "IMG_8520.HEIC",
+      "relation": "burst",
+      "confidence": "confirmed",
+      "exposure_relation": "burst",
+      "confirmed_by": "user",
+      "evidence": "Minimal facial expression change."
+    },
+    {
+      "id": 3,
+      "path1": "IMG_9015.JPG",
+      "path2": "IMG_9016.JPG",
+      "relation": "burst",
+      "confidence": "confirmed",
+      "exposure_relation": "burst",
+      "confirmed_by": "user",
+      "evidence": "Snowflakes differ."
+    },
+    {
+      "id": 4,
+      "path1": "IMG_9258.HEIC",
+      "path2": "IMG_9259.HEIC",
+      "relation": "copy_candidate",
+      "confidence": "working_label",
+      "exposure_relation": "unknown",
+      "confirmed_by": "user",
+      "evidence": "User could not find a difference and asked to treat the pair as copies."
+    },
+    {
+      "id": 5,
+      "path1": "IMG_9276.HEIC",
+      "path2": "IMG_9277.HEIC",
+      "relation": "burst",
+      "confidence": "confirmed",
+      "exposure_relation": "burst",
+      "confirmed_by": "user",
+      "evidence": "Carousel rotated slightly."
+    },
+    {
+      "id": 6,
+      "path1": "IMG_9293.HEIC",
+      "path2": "IMG_9294.HEIC",
+      "relation": "burst",
+      "confidence": "confirmed",
+      "exposure_relation": "burst",
+      "confirmed_by": "user",
+      "evidence": "Minimal facial expression change."
+    }
+  ]
+}
