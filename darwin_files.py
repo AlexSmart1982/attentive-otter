@@ -17,6 +17,7 @@ class LockedFile:
     def __init__(self, path, create=False):
         self.path = Path(path).absolute()
         self.handle = None
+        self._verified_digest = None
         flags = os.O_NOFOLLOW | (os.O_RDWR | os.O_CREAT | os.O_EXCL if create else os.O_RDONLY)
         descriptor = os.open(self.path, flags, 0o600)
         self.handle = descriptor
@@ -63,7 +64,8 @@ class LockedFile:
         value = hashlib.sha256()
         for data in self.chunks(cancel_event):
             value.update(data)
-        return value.hexdigest()
+        self._verified_digest = value.hexdigest()
+        return self._verified_digest
 
     def delete(self):
         self._check_path()
@@ -153,3 +155,6 @@ class LockedFile:
 
     def allow_recycle(self):
         self._check_path()
+        expected = self._verified_digest
+        if expected is None or self.digest() != expected:
+            raise OSError("Исходный файл изменился перед отправкой в корзину: " + str(self.path))

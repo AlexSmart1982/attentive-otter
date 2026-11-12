@@ -2,6 +2,7 @@
 
 import errno
 import hashlib
+import json
 import os
 from pathlib import Path
 import sys
@@ -95,3 +96,25 @@ class MacOSTests(unittest.TestCase):
         finally:
             if recycled.is_file():
                 recycled.unlink()  # This test owns exactly this disposable fixture.
+
+    def test_edit_after_backup_blocks_native_trash_and_preserves_changed_bytes(self):
+        path = str(self.source)
+        model = ActionPlan({"source_roots": [str(self.source.parent)], "scan_report": str(self.root / "scan.json"),
+                            "files": [{"path": path, "group_id": 1, "sha256": self.expected}], "pairs": []})
+        model.remove_selected(1, [path])
+        project = self.root / "session.cmp.json"
+        changed = []
+        def edit(done, total):
+            if journal_path(project).exists() and not changed:
+                record = json.loads(journal_path(project).read_text())["removed"][0]
+                if record.get("backup_ready"):
+                    held = Path(record["held"])
+                    held.write_bytes(b"external edit after backup")
+                    changed.append(held)
+        with patch("execution.recycle_file") as recycle:
+            with self.assertRaises(OSError):
+                apply_files(model, project, progress=edit)
+            recycle.assert_not_called()
+        self.assertEqual(len(changed), 1)
+        self.assertEqual(changed[0].read_bytes(), b"external edit after backup")
+        self.assertEqual(hashlib.sha256(self.source.read_bytes()).hexdigest(), self.expected)
