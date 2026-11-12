@@ -20,5 +20,5 @@ coll = COLLECT(exe, a.binaries, a.datas, strip=False, upx=False, name='Attentive
 app = BUNDLE(coll, name='Attentive_Otter.app', icon=str(root / 'assets/application.icns'),
              bundle_identifier='io.github.alexsmart1982.attentive-otter', version='1.0.0',
              info_plist={'CFBundleDisplayName': 'Attentive Otter', 'CFBundleVersion': '1.0.0.2',
-                         'NSHighResolutionCapable': True, 'LSMinimumSystemVersion': '13.0',
+                         'NSHighResolutionCapable': True, 'LSMinimumSystemVersion': '14.0',
                          'NSPrincipalClass': 'NSApplication'})

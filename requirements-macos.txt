@@ -17,6 +17,10 @@ altgraph==0.17.4
 macholib==1.16.3
 packaging==25.0
 setuptools==80.9.0
+wheel==0.45.1
+scikit-build==0.18.1
+cmake==3.31.6
+ninja==1.11.1.4
 # Research modules imported by the existing full test suite.
 matplotlib==3.10.7
 pandas==2.3.3

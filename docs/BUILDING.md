@@ -1,4 +1,4 @@
-# Building the Windows application
+# Building Attentive Otter
 
 This release was built with **CPython 3.13.8 x64** and **PyInstaller 6.16.0** on Windows. The exact application-source hashes and package versions are recorded in [build-info.json](../build-info.json).
 
@@ -19,7 +19,7 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\pythonw.exe -B desktop.pyw
 ```
 
-The current runtime includes Windows-specific filesystem and Recycle Bin code. A macOS port is [planned](ROADMAP.md).
+For native macOS source execution, tests and application bundles, see [macOS instructions](MACOS.md). Use `requirements-macos.txt`; the Windows lock file contains Windows-specific packages.
 
 ## Run tests
 
