@@ -39,7 +39,7 @@ jobs:
         id: opencv-cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
         with:
-          path: ~/.cache/attentive_otter_opencv_v1
+          path: ~/.cache/attentive_otter_opencv_v1/**/*.whl
           key: opencv-image-only-v1-${{ matrix.architecture }}-${{ hashFiles('build_macos_opencv.py') }}
       - name: Build image-processing dependency
         run: python -B build_macos_opencv.py
@@ -47,7 +47,7 @@ jobs:
         if: steps.opencv-cache.outputs.cache-hit != 'true'
         uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
         with:
-          path: ~/.cache/attentive_otter_opencv_v1
+          path: ~/.cache/attentive_otter_opencv_v1/**/*.whl
           key: opencv-image-only-v1-${{ matrix.architecture }}-${{ hashFiles('build_macos_opencv.py') }}
       - name: Record native runtime versions
         run: |

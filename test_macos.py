@@ -22,7 +22,9 @@ class MacOSTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(prefix="otter_macos_")
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name).resolve()
-        self.source = self.root / "фото.jpg"
+        photos = self.root / "photos"
+        photos.mkdir()
+        self.source = photos / "фото.jpg"
         self.source.write_bytes(b"disposable macOS fixture")
         self.expected = hashlib.sha256(self.source.read_bytes()).hexdigest()
 
@@ -72,7 +74,7 @@ class MacOSTests(unittest.TestCase):
         destination = self.root / "destination"
         destination.mkdir()
         path = str(self.source)
-        model = ActionPlan({"source_roots": [str(self.root)], "scan_report": str(self.root / "scan.json"), "files": [
+        model = ActionPlan({"source_roots": [str(self.source.parent)], "scan_report": str(self.root / "scan.json"), "files": [
             {"path": path, "group_id": 1, "sha256": self.expected}], "pairs": []})
         model.move_files(1, [path], destination)
         project = self.root / "session.cmp.json"

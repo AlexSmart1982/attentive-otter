@@ -12,6 +12,7 @@ from pathlib import Path
 import platform
 import subprocess
 import sys
+import tarfile
 import urllib.request
 
 
@@ -41,10 +42,22 @@ def main():
         urllib.request.urlretrieve(spec["url"], archive)
         if hashlib.sha256(archive.read_bytes()).hexdigest() != spec["digests"]["sha256"]:
             raise RuntimeError("OpenCV source checksum does not match PyPI")
+        source = folder / "source"
+        source.mkdir(exist_ok=True)
+        with tarfile.open(archive) as bundle:
+            bundle.extractall(source, filter="data")
+        tree = next(source.glob("opencv-python-*"))
+        setup = tree / "setup.py"
+        text = setup.read_text(encoding="utf-8")
+        # The upstream annotation generator assumes modules outside BUILD_LIST.
+        # Omit its optional typing metadata, without changing native image code.
+        text = text.replace('[ r"python/cv2/py.typed" ] if sys.version_info >= (3, 6) else []', '[]')
+        text = text.replace('rearrange_cmake_output_data["cv2.typing"] = ["python/cv2" + r"/typing/.*\\.py"]', 'pass  # Optional typing metadata omitted for the image-only build.')
+        setup.write_text(text, encoding="utf-8")
         env = {**os.environ, "CMAKE_ARGS": CMAKE_ARGS, "CMAKE_BUILD_PARALLEL_LEVEL": "3",
                "MACOSX_DEPLOYMENT_TARGET": "14.0"}
         subprocess.run([sys.executable, "-m", "pip", "wheel", "--no-deps", "--no-build-isolation",
-                        "--wheel-dir", str(folder), str(archive)], env=env, check=True)
+                        "--wheel-dir", str(folder), str(tree)], env=env, check=True)
         wheels = list(folder.glob("opencv_python-4.12.0.88-*.whl"))
     if len(wheels) != 1:
         raise RuntimeError("Expected exactly one native OpenCV wheel")
