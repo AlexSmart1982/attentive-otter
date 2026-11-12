@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+defaults:
+  run:
+    shell: bash
 permissions:
   contents: read
 jobs:
@@ -43,7 +46,7 @@ jobs:
         run: |
           python -c "import cv2,pillow_heif;from PyQt5.QtCore import qVersion;print(qVersion());print(pillow_heif.libheif_info());print(cv2.getBuildInformation())"
       - name: Run full regression suite
-        run: python -B -m unittest discover -v 2>&1 | tee tests-macos.log
+        run: python -B -X faulthandler .github/scripts/run_macos_tests.py 2>&1 | tee tests-macos.log
       - name: Build and verify app bundle
         run: python -B build_macos.py
       - name: Upload verification and bundle

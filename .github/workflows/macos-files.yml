@@ -1,0 +1,22 @@
+name: macOS filesystem regression
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  files:
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15, macos-15-intel]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: "3.13.8"
+      - run: python -m pip install psutil==7.1.0 pyobjc-core==11.1 pyobjc-framework-Cocoa==11.1
+      - run: python -B -X faulthandler -m unittest test_execution test_macos -v
