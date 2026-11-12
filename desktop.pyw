@@ -6,6 +6,8 @@ if __name__ == "__main__":
         freeze_support()
         import sys
         if len(sys.argv) == 3 and sys.argv[1] == "--verify-deployment":
+            import os
+            os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
             from deployment_check import run
             sys.exit(run(sys.argv[2]))
         from app_ui import main

@@ -25,12 +25,13 @@ def run(*args, **kwargs):
     subprocess.run(list(map(str, args)), check=True, **kwargs)
 
 
-def verify(bundle, output):
+def verify(bundle, output, launch_services=False):
     environment = {k: v for k, v in os.environ.items() if k not in (
         "PYTHONHOME", "PYTHONPATH", "VIRTUAL_ENV", "QT_PLUGIN_PATH", "QT_QPA_PLATFORM_PLUGIN_PATH")}
     environment.update(PATH="/usr/bin:/bin:/usr/sbin:/sbin", QT_QPA_PLATFORM="offscreen")
-    run(bundle / "Contents/MacOS/Attentive_Otter", "--verify-deployment", output,
-        cwd=bundle.parent, env=environment, timeout=180)
+    command = (["/usr/bin/open", "-W", "-n", bundle, "--args"] if launch_services
+               else [bundle / "Contents/MacOS/Attentive_Otter"])
+    run(*command, "--verify-deployment", output, cwd=bundle.parent, env=environment, timeout=180)
     report = json.loads(output.read_text(encoding="utf-8"))
     if not report.get("ok") or not report.get("frozen"):
         raise RuntimeError("macOS deployment verification failed")
@@ -118,6 +119,7 @@ def main():
         run("/usr/bin/ditto", "-x", "-k", output / (package.name + ".zip"), directory)
         extracted = Path(directory) / package.name / "Attentive_Otter.app"
         verify(extracted, output / ("archive-check-" + architecture + ".json"))
+        verify(extracted, output / ("launch-check-" + architecture + ".json"), launch_services=True)
         run("/usr/bin/codesign", "--verify", "--deep", "--strict", extracted)
     print("Verified bundle: " + str(package), flush=True)
 

@@ -65,5 +65,6 @@ jobs:
             tests-macos.log
             release/*.zip
             release/archive-check-*.json
+            release/launch-check-*.json
           retention-days: 14
           compression-level: 0
