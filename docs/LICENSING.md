@@ -24,6 +24,8 @@
 
 ## Сторонние компоненты
 
+Для [macOS beta.2](https://github.com/AlexSmart1982/attentive-otter/releases/tag/v1.0.0-beta.2) опубликованы отдельные бинарные и Corresponding Source ZIP для arm64 и x64. Они содержат Qt 5.15.17, PyObjC (MIT), исходники зависимостей, рецепты сборки, notices и свои `third_party/sources.json`. macOS использует собственную сборку OpenCV без FFmpeg; строки FFmpeg/pywin32 ниже относятся к Windows beta.1. При распространении Mac-версии используйте соответствующий ей комплект источников, а не Windows Source ZIP.
+
 Приведённая таблица — краткая навигация по комплекту. Полные тексты, исключения и уведомления находятся в [third_party/licenses](../third_party/licenses), а точные версии, URL и SHA256 исходников — в [sources.json](../third_party/sources.json).
 
 | Компонент | Основная лицензия в текущем комплекте |

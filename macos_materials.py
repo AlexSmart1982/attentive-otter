@@ -81,7 +81,7 @@ def prepare_materials(destination):
     if python_notice.exists():
         shutil.copy2(python_notice, licenses / "Python-LICENSE.txt")
     # Preserve wheel provenance for independently rebuilding the custom OpenCV.
-    wheel_root = Path.home() / ".cache/attentive_otter_opencv_v1" / platform.machine()
+    wheel_root = Path.home() / ".cache/attentive_otter_opencv_v2" / platform.machine()
     wheel = next(wheel_root.glob("opencv_python-*.whl"))
     index = dict(archives=[record for _, record in results], heif_runtime=info,
                  qt_runtime=qVersion(), opencv_wheel=dict(file=wheel.name, sha256=sha256(wheel)),

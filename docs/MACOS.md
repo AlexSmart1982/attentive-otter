@@ -29,9 +29,12 @@ python3.13 -m venv .venv
 .venv/bin/python -m pip install -r requirements-macos.txt
 .venv/bin/python -B desktop.pyw
 QT_QPA_PLATFORM=offscreen .venv/bin/python -B -m unittest discover -v
+.venv/bin/python -B build_macos_opencv.py
 .venv/bin/python -B build_macos.py --output /tmp/Attentive_Otter_release
 ```
 
-The builder creates a `.app`, runs the same deployment check against it and a relocated copy, and verifies the ad-hoc code signatures. Distribution archives preserve symlinks and executable permissions using `ditto`. The GitHub workflow runs the full regression suite for each architecture before building.
+The distribution builds OpenCV 4.12.0 from the pinned opencv-python source with the required image modules. The recipe omits video backends and optional typing metadata; native image operations remain upstream OpenCV code. Tests run against this dependency before packaging.
+
+The builder creates a `.app`, runs the deployment check against it, a relocated copy and the extracted distribution ZIP, and verifies the ad-hoc code signatures. Distribution archives preserve symlinks and executable permissions using `ditto`. The GitHub workflow runs every test module in a separate process and rejects any failed or interrupted test.
 
 The dedicated Corresponding Source archives include the application snapshot, upstream source archives, licenses, dependency versions and build instructions. GitHub's automatic source ZIP is not the complete dependency-source bundle. The binary and source for each architecture must be distributed together or made available at the same download location under the applicable licenses.

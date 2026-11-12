@@ -17,7 +17,7 @@ import urllib.request
 
 
 CMAKE_ARGS = " ".join((
-    "-DBUILD_LIST=core,imgproc,imgcodecs,python3", "-DBUILD_TESTS=OFF",
+    "-DBUILD_LIST=core,imgproc,imgcodecs,video,python3", "-DBUILD_TESTS=OFF",
     "-DBUILD_PERF_TESTS=OFF", "-DBUILD_EXAMPLES=OFF", "-DWITH_FFMPEG=OFF",
     "-DWITH_GSTREAMER=OFF", "-DWITH_QT=OFF", "-DWITH_COCOA=OFF",
     "-DWITH_AVIF=OFF", "-DWITH_OPENEXR=OFF", "-DWITH_JASPER=OFF",
@@ -31,7 +31,7 @@ CMAKE_ARGS = " ".join((
 def main():
     if sys.platform != "darwin":
         raise SystemExit("This recipe is for macOS")
-    folder = Path.home() / ".cache/attentive_otter_opencv_v1" / platform.machine()
+    folder = Path.home() / ".cache/attentive_otter_opencv_v2" / platform.machine()
     folder.mkdir(parents=True, exist_ok=True)
     wheels = list(folder.glob("opencv_python-4.12.0.88-*.whl"))
     if not wheels:

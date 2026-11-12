@@ -4,11 +4,11 @@
 
 Windows x64 beta: comparison, review, saved progress, Recycle Bin or selected-folder removal, moves, replacements and interrupted-operation recovery.
 
-## Next platform
+## macOS
 
-macOS is the next planned target. Publication requires an actual macOS build and checks for image decoding, saved progress, native Trash handling, safe moves/replacements, file identity and recovery. Architecture and supported macOS versions will be stated with that release.
+Native Apple Silicon and Intel beta packages are provided in beta.2. They require macOS 14+ and are tested on macOS 15. See [installation, file-operation limits and source builds](MACOS.md).
 
-The Windows package is not a macOS package. No macOS download is announced until a build has been produced and tested.
+Apple Developer ID signing and notarization are not provided. The Windows beta.1 and its matching source remain available unchanged.
 
 ## Existing improvements backlog
 
