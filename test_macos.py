@@ -5,6 +5,7 @@ import hashlib
 import os
 from pathlib import Path
 import sys
+import subprocess
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -55,7 +56,7 @@ class MacOSTests(unittest.TestCase):
 
     def test_cross_volume_copy_preserves_metadata(self):
         target = self.root / "target.jpg"
-        os.setxattr(self.source, "user.otter.fixture", b"test metadata")
+        subprocess.run(["/usr/bin/xattr", "-w", "com.attentiveotter.fixture", "test metadata", str(self.source)], check=True)
         before = self.source.stat()
         guard = LockedFile(self.source)
         self.addCleanup(guard.close)
@@ -64,13 +65,14 @@ class MacOSTests(unittest.TestCase):
         self.assertEqual(hashlib.sha256(target.read_bytes()).hexdigest(), self.expected)
         self.assertEqual(target.stat().st_mtime_ns, before.st_mtime_ns)
         self.assertAlmostEqual(target.stat().st_birthtime, before.st_birthtime, places=4)
-        self.assertEqual(os.getxattr(target, "user.otter.fixture"), b"test metadata")
+        self.assertEqual(subprocess.check_output([
+            "/usr/bin/xattr", "-p", "com.attentiveotter.fixture", str(target)]).strip(), b"test metadata")
 
     def test_edit_after_preflight_is_detected_before_move(self):
         destination = self.root / "destination"
         destination.mkdir()
         path = str(self.source)
-        model = ActionPlan({"source_roots": [str(self.root)], "files": [
+        model = ActionPlan({"source_roots": [str(self.root)], "scan_report": str(self.root / "scan.json"), "files": [
             {"path": path, "group_id": 1, "sha256": self.expected}], "pairs": []})
         model.move_files(1, [path], destination)
         project = self.root / "session.cmp.json"

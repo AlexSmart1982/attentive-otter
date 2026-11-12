@@ -36,11 +36,12 @@ class LockedFile:
 
     def identity(self):
         status = os.fstat(self.handle)
-        return [status.st_dev, status.st_ino]
+        return [status.st_dev, status.st_ino >> 32, status.st_ino & 0xffffffff]
 
     def _check_path(self):
         status = self.path.stat(follow_symlinks=False)
-        if not stat.S_ISREG(status.st_mode) or [status.st_dev, status.st_ino] != self.identity():
+        identity = [status.st_dev, status.st_ino >> 32, status.st_ino & 0xffffffff]
+        if not stat.S_ISREG(status.st_mode) or identity != self.identity():
             raise OSError("Исходный путь подменён: " + str(self.path))
 
     def chunks(self, cancel_event=None):
@@ -83,6 +84,23 @@ class LockedFile:
             os.lseek(self.handle, 0, os.SEEK_SET)
             # COPYFILE_STAT | COPYFILE_XATTR | COPYFILE_DATA preserves macOS metadata.
             if copy(self.handle, target.handle, None, 2 | 4 | 8):
+                code = ctypes.get_errno()
+                raise OSError(code, os.strerror(code), str(destination))
+            # fcopyfile does not preserve the birth time on every macOS version.
+            class AttrList(ctypes.Structure):
+                _fields_ = [("count", ctypes.c_ushort), ("reserved", ctypes.c_ushort),
+                            ("common", ctypes.c_uint32), ("volume", ctypes.c_uint32),
+                            ("directory", ctypes.c_uint32), ("file", ctypes.c_uint32),
+                            ("fork", ctypes.c_uint32)]
+            class Timespec(ctypes.Structure):
+                _fields_ = [("seconds", ctypes.c_long), ("nanoseconds", ctypes.c_long)]
+            created = os.fstat(self.handle).st_birthtime
+            timestamp = Timespec(int(created), round((created - int(created)) * 1_000_000_000))
+            attrs = AttrList(5, 0, 0x00000200, 0, 0, 0, 0)  # ATTR_CMN_CRTIME
+            set_attrs = library.fsetattrlist
+            set_attrs.argtypes = [ctypes.c_int, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_size_t, ctypes.c_uint32]
+            set_attrs.restype = ctypes.c_int
+            if set_attrs(target.handle, ctypes.byref(attrs), ctypes.byref(timestamp), ctypes.sizeof(timestamp), 0):
                 code = ctypes.get_errno()
                 raise OSError(code, os.strerror(code), str(destination))
             os.fsync(target.handle)

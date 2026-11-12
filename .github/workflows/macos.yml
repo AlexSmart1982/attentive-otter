@@ -36,12 +36,19 @@ jobs:
       - name: Install dependencies
         run: python -m pip install -r requirements-macos.txt
       - name: Cache native OpenCV wheel
+        id: opencv-cache
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
         with:
           path: ~/.cache/attentive_otter_opencv_v1
           key: opencv-image-only-v1-${{ matrix.architecture }}-${{ hashFiles('build_macos_opencv.py') }}
       - name: Build image-processing dependency
         run: python -B build_macos_opencv.py
+      - name: Preserve built wheel for retries
+        if: steps.opencv-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9
+        with:
+          path: ~/.cache/attentive_otter_opencv_v1
+          key: opencv-image-only-v1-${{ matrix.architecture }}-${{ hashFiles('build_macos_opencv.py') }}
       - name: Record native runtime versions
         run: |
           python -c "import cv2,pillow_heif;from PyQt5.QtCore import qVersion;print(qVersion());print(pillow_heif.libheif_info());print(cv2.getBuildInformation())"
