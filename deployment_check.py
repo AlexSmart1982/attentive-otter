@@ -251,7 +251,8 @@ def run(destination):
                 groups=len(old.model.groups), kept=len(old.model.kept), removed=len(old.model.recycles),
                 undo=len(old.model.history), redo=len(old.model.redo_history),
                 original_sha256=fingerprint, navigation_preserved=True, original_unchanged=True)
-        report.update(ok=True, real_apply=True, resume=True, console=bool(ctypes.windll.kernel32.GetConsoleWindow()),
+        report.update(ok=True, real_apply=True, resume=True,
+                      console=bool(ctypes.windll.kernel32.GetConsoleWindow()) if os.name == "nt" else False,
                       user_data=QStandardPaths.writableLocation(QStandardPaths.AppLocalDataLocation))
     except Exception:
         report["error"] = traceback.format_exc()

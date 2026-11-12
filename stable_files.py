@@ -5,6 +5,7 @@ from contextvars import ContextVar
 import ctypes
 import hashlib
 import os
+import sys
 from pathlib import Path
 
 
@@ -174,3 +175,7 @@ def protected_files():
 def protected_file(path):
     path = Path(path).absolute()
     return next((file for file in _protected.get() if file.handle is not None and file.path == path), None)
+
+
+if sys.platform == "darwin":
+    from darwin_files import LockedFile

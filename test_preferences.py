@@ -1,3 +1,4 @@
+from system_trash import FILE_SYSTEM_LABEL
 from dataclasses import asdict
 from pathlib import Path
 import tempfile
@@ -135,7 +136,7 @@ class PreferencesTests(unittest.TestCase):
         reasons = recommendation_reasons([a, b], settings)
         for reason in reasons.values():
             self.assertEqual(reason["rule"], "date")
-            self.assertIn("создан, Windows", reason["text"])
+            self.assertIn("создан, " + FILE_SYSTEM_LABEL, reason["text"])
             self.assertIn("не дата съёмки", reason["text"])
         a["captured_at"] = "2015:08:15 12:37:31"
         reasons = recommendation_reasons([a, b], settings)

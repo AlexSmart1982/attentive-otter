@@ -26,4 +26,14 @@ if __name__ == "__main__":
             detail = f"Подробности ошибки: {filename}\n\n{detail}"
         except OSError:
             pass
-        ctypes.windll.user32.MessageBoxW(None, detail, "Attentive Otter — ошибка запуска", 0x10)
+        if os.name == "nt":
+            ctypes.windll.user32.MessageBoxW(None, detail, "Attentive Otter — ошибка запуска", 0x10)
+        else:
+            import sys
+            print(detail, file=sys.stderr)
+            try:
+                from PyQt5.QtWidgets import QApplication, QMessageBox
+                app = QApplication.instance() or QApplication([])
+                QMessageBox.critical(None, "Attentive Otter — ошибка запуска", detail)
+            except Exception:
+                pass

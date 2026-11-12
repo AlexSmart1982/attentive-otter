@@ -1,3 +1,4 @@
+from system_trash import FILE_SYSTEM_LABEL
 """Offscreen integration checks with file application in disposable fixtures."""
 import hashlib
 import json
@@ -1048,7 +1049,7 @@ class AppUiTests(unittest.TestCase):
                         needed = label.fontMetrics().boundingRect(
                             label.rect().adjusted(0, 0, 0, 2000), Qt.TextWordWrap, label.text()).height()
                         self.assertLessEqual(needed, label.height())
-                        self.assertIn("Windows", label.text())
+                        self.assertIn(FILE_SYSTEM_LABEL, label.text())
                         self.assertIn("≠ съёмка", label.text())
             finally:
                 self.close_window(window)

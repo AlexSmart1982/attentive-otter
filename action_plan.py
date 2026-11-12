@@ -10,6 +10,7 @@ from pathlib import Path
 import uuid
 
 from storage import write_json
+from system_trash import TRASH_DESTINATION
 
 
 class ActionPlan:
@@ -50,7 +51,7 @@ class ActionPlan:
 
     @property
     def deletion_description(self):
-        return "в папку: " + self.delete_folder if self.delete_mode == "folder" else "в корзину Windows"
+        return "в папку: " + self.delete_folder if self.delete_mode == "folder" else TRASH_DESTINATION
 
     def removal_destinations(self, check_disk=True):
         removed = self.recycles | self.replacements.keys()

@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 
 from storage import write_json
+from system_trash import TRASH_LABEL, FILE_SYSTEM_LABEL
 
 
 RULE_LABELS = {"heic": "Формат HEIC / HEIF", "resolution": "Большее разрешение (число пикселей)",
@@ -15,7 +16,7 @@ DATE_LABELS = {"auto": "Съёмка → создание → изменение
                "captured_at": "Только дата съёмки", "created_at": "Только создание файла",
                "modified_at": "Только изменение файла"}
 THEME_LABELS = {"system": "Системная", "dark": "Тёмная", "light": "Светлая"}
-DELETE_MODES = {"recycle_bin": "Корзина Windows", "folder": "Выбранная папка"}
+DELETE_MODES = {"recycle_bin": TRASH_LABEL, "folder": "Выбранная папка"}
 SEARCH_MODES = {"strict": ("Строгий", .97, "Нынешняя граница: копии и самые близкие кадры"),
                 "close": ("Близкое сходство", .95, "Больше кадров серии в одной группе"),
                 "extended": ("Расширенный", .92, "Шире окрестность; возможны посторонние кадры")}
@@ -167,8 +168,8 @@ def recommendation_reasons(rows, settings, paths=None):
             if normalized[4] == ":":
                 normalized = normalized[:4]+"-"+normalized[5:7]+"-"+normalized[8:]
             date = datetime.fromisoformat(normalized).strftime("%d.%m.%Y" if compact else "%d.%m.%Y %H:%M:%S")
-            label = {"captured_at": "EXIF", "created_at": "создан, Windows",
-                     "modified_at": "изменён, Windows"}[source]
+            label = {"captured_at": "EXIF", "created_at": "создан, " + FILE_SYSTEM_LABEL,
+                     "modified_at": "изменён, " + FILE_SYSTEM_LABEL}[source]
             return label+" · "+date
         if key == "resolution":
             return (f"{row.get('stored_width')}×{row.get('stored_height')}"
@@ -187,7 +188,7 @@ def recommendation_reasons(rows, settings, paths=None):
             if "date" in rules:
                 detail += "\nИспользуется: "+value_text(path, "date")+"."
                 if settings.date_source == "auto":
-                    detail += " При одинаковой дате EXIF даты Windows не разрывают равенство."
+                    detail += f" При одинаковой дате EXIF даты {FILE_SYSTEM_LABEL} не разрывают равенство."
             result[path] = {"text": "Равноценны по включённым правилам.",
                             "short_text": "Равноценны по правилам.", "detail": detail, "rule": None}
             continue
@@ -207,7 +208,7 @@ def recommendation_reasons(rows, settings, paths=None):
             sources = {preferred_date(files[p], settings)[1] for p in (path, reference)}
             if sources - {"captured_at", None}:
                 text += " Это не дата съёмки."
-                detail += "\nДаты Windows относятся к файлу и не устанавливают дату съёмки."
+                detail += f"\nДаты {FILE_SYSTEM_LABEL} относятся к файлу и не устанавливают дату съёмки."
             if len(sources - {None}) > 1:
                 detail += "\nСравниваются разные источники дат; выбор следует настройке, а не доказывает происхождение."
         short_text = ("" if key == "date" else labels[key]+": ")+value_text(path, key, compact=True)
@@ -217,7 +218,7 @@ def recommendation_reasons(rows, settings, paths=None):
                 caption = {"captured_at": "EXIF", "created_at": "Создан", "modified_at": "Изменён"}[source]
                 short_text = caption+": "+value_text(path, key, compact=True).rsplit(" · ", 1)[-1]
                 if source != "captured_at":
-                    short_text += "\nWindows ≠ съёмка"
+                    short_text += f"\n{FILE_SYSTEM_LABEL} ≠ съёмка"
         result[path] = {"text": text, "short_text": short_text, "detail": detail, "rule": key}
     return result
 

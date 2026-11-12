@@ -39,6 +39,7 @@ from workspace_session import WorkspaceSession
 from review_keys import ReviewKeys
 from execution import apply_files
 from progress_eta import ScanETA
+from system_trash import TRASH_LABEL, TRASH_DESTINATION
 
 
 STATUS = {"undecided": "Не решено", "keep": "Оставить", "recycle": "В корзину",
@@ -630,9 +631,9 @@ class MainWindow(WorkspaceSession, QMainWindow):
         for action in data["actions"]:
             if action["kind"] == "recycle":
                 rows.append((self.model.deletion_label, action["path"],
-                             "Корзина Windows" if action["destination"] == "recycle_bin" else action["destination"]))
+                             TRASH_LABEL if action["destination"] == "recycle_bin" else action["destination"]))
             elif action["kind"] == "replace":
-                removed_to = "Корзина Windows" if action["old_file_destination"] == "recycle_bin" else action["old_file_destination"]
+                removed_to = TRASH_LABEL if action["old_file_destination"] == "recycle_bin" else action["old_file_destination"]
                 rows.append(("Заменить", action["source"]+" → вместо "+action["target"],
                              action["destination"] + "\nУбираемый файл → " + removed_to))
             else:
@@ -715,13 +716,13 @@ class MainWindow(WorkspaceSession, QMainWindow):
             removed_to = removals.get(path)
             if removed_to and removed_to != "recycle_bin":
                 effective = Path(removed_to)
-            destination_text = "Корзина Windows" if removed_to == "recycle_bin" else str(effective)
+            destination_text = TRASH_LABEL if removed_to == "recycle_bin" else str(effective)
             values = ("", ("A · опорный · " if path == self.a else "")+effective.name,
                       self.file_status_text(path)+(" · совет" if path in self.suggested else ""),
                       row.get("detected_format") or Path(path).suffix,
                       f"{row['stored_width']}×{row['stored_height']}", f"{row['bytes']/1024:.0f} КБ",
                       date or "—", row.get("camera") or "—", str(exif_completeness(row)),
-                      "Корзина Windows" if removed_to == "recycle_bin" else str(effective.parent))
+                      TRASH_LABEL if removed_to == "recycle_bin" else str(effective.parent))
             rule_columns = {3: "heic", 4: "resolution", 6: "date", 7: "camera", 8: "exif"}
             sort_values = self.file_sort_values(path)
             for j, text in enumerate(values):
@@ -1003,7 +1004,7 @@ class MainWindow(WorkspaceSession, QMainWindow):
         self.reference_button.setEnabled(len(selected) == 1 and not self.busy)
         self.delete_selected_button.setEnabled(bool(selected) and not self.busy)
         self.delete_selected_button.setText(f"Удалить выбранные ({len(selected)})")
-        deletion = self.model.deletion_description if self.model else "в корзину Windows"
+        deletion = self.model.deletion_description if self.model else TRASH_DESTINATION
         for button, path, letter in zip(self.delete_side_buttons, (self.a, self.b), ("A", "B")):
             button.setEnabled(bool(self.model and path and path not in self.model.inactive
                                    and not self.busy and not self.loading_preview and not self.preview_error))

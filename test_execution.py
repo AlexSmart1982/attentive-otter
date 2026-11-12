@@ -18,7 +18,7 @@ from action_plan import ActionPlan
 from execution import apply_files, journal_path, move_exclusive
 from project import save_project, load_project
 from storage import write_json
-from windows_trash import recycle_file
+from system_trash import recycle_file
 from stable_files import LockedFile
 
 
@@ -443,6 +443,7 @@ class ExecutionTests(unittest.TestCase):
         apply_files(self.model, self.filename, progress=check_lock, recycler=self.recycle)
         self.assertTrue(checked)
 
+    @unittest.skipUnless(os.name == "nt", "Windows mandatory sharing protection")
     def test_sources_cannot_be_written_or_substituted_after_hashing(self):
         self.model.move_files(1, [self.c], self.destination)
         self.model.remove_selected(1, [self.a])

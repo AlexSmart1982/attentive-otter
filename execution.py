@@ -9,11 +9,12 @@ import os
 import re
 from pathlib import Path
 import shutil
+import sys
 import uuid
 import psutil
 
 from storage import write_json
-from windows_trash import recycle_file
+from system_trash import recycle_file
 from project_lock import project_lock, project_writer
 from stable_files import LockedFile, protected_files, protected_file
 
@@ -45,7 +46,7 @@ def move_exclusive(source, destination, expected, on_created=None):
     if protected is not None:
         protected.move_to(destination, expected, on_created=on_created)
         return
-    if os.name == "nt":
+    if os.name == "nt" or sys.platform == "darwin":
         protected = LockedFile(source)
         try:
             protected.move_to(destination, expected, on_created=on_created)
@@ -65,7 +66,7 @@ def move_exclusive(source, destination, expected, on_created=None):
 
 def copy_exclusive(source, destination, expected):
     source, destination = Path(source), Path(destination)
-    if os.name == "nt":
+    if os.name == "nt" or sys.platform == "darwin":
         protected = protected_file(source)
         owned = protected is None
         if owned:
@@ -203,7 +204,7 @@ def rollback(journal):
                 continue
             recycled = Path(entry.get("recycled") or "")
             if not entry.get("recycled") or not recycled.is_file() or digest(recycled) != entry["sha256"]:
-                raise OSError("Восстановите файл из корзины Windows: "+str(source))
+                raise OSError("Восстановите файл из системной корзины: "+str(source))
             # Keep the recycled copy until the original has been verified and restored.
             copy_exclusive(recycled, source, entry["sha256"])
         except Exception as error:
