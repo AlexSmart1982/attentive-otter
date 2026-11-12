@@ -38,3 +38,11 @@ The distribution builds OpenCV 4.12.0 from the pinned opencv-python source with 
 The builder creates a `.app`, runs the deployment check against it, a relocated copy and the extracted distribution ZIP, and verifies the ad-hoc code signatures. Distribution archives preserve symlinks and executable permissions using `ditto`. The GitHub workflow runs every test module in a separate process and rejects any failed or interrupted test.
 
 The dedicated Corresponding Source archives include the application snapshot, upstream source archives, licenses, dependency versions and build instructions. GitHub's automatic source ZIP is not the complete dependency-source bundle. The binary and source for each architecture must be distributed together or made available at the same download location under the applicable licenses.
+
+The paired application/source packager uses a Git checkout to identify and archive the source commit. To rebuild only the application from an extracted Corresponding Source ZIP, install `requirements-macos.txt`, run `build_macos_opencv.py`, then run `python -m PyInstaller --noconfirm Attentive_Otter_macOS.spec`. The result is `dist/Attentive_Otter.app`.
+
+## Published verification
+
+[macOS build and tests](https://github.com/AlexSmart1982/attentive-otter/actions/runs/43183695772) passed on both architectures at commit `15ceb719c8d2468ebc1e5462542ad34275a37e36`, tagged `v1.0.0-beta.2`. Each architecture ran 180 cases: 178 passed and two Windows-only cases were skipped. [Windows regression](https://github.com/AlexSmart1982/attentive-otter/actions/runs/43183696579) passed at the same commit.
+
+[Verification records](verification/macos) and the macOS [dependency-source inventories](../third_party/macos) accompany the published archives. The GitHub-calculated archive digests match the local checksums, and anonymous downloads were checked after publication.

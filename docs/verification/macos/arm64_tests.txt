@@ -1,0 +1,307 @@
+
+=== test_action_plan ===
+test_bulk_decision_retargets_previous_replacement (test_action_plan.ActionPlanTests.test_bulk_decision_retargets_previous_replacement) ... ok
+test_bulk_replacement_conflict_is_rejected_as_one_transaction (test_action_plan.ActionPlanTests.test_bulk_replacement_conflict_is_rejected_as_one_transaction) ... ok
+test_collision_is_rejected_atomically (test_action_plan.ActionPlanTests.test_collision_is_rejected_atomically) ... ok
+test_destination_uses_actual_format_for_mislabeled_source (test_action_plan.ActionPlanTests.test_destination_uses_actual_format_for_mislabeled_source) ... ok
+test_discard_group_does_not_affect_other_groups (test_action_plan.ActionPlanTests.test_discard_group_does_not_affect_other_groups) ... ok
+test_discard_group_supersedes_replacements_and_can_be_restored (test_action_plan.ActionPlanTests.test_discard_group_supersedes_replacements_and_can_be_restored) ... ok
+test_empty_selection_does_not_mean_delete_group (test_action_plan.ActionPlanTests.test_empty_selection_does_not_mean_delete_group) ... ok
+test_export_cannot_write_into_either_source_or_review (test_action_plan.ActionPlanTests.test_export_cannot_write_into_either_source_or_review) ... ok
+test_export_restore_and_reset_leave_originals_intact (test_action_plan.ActionPlanTests.test_export_restore_and_reset_leave_originals_intact) ... ok
+test_failed_and_empty_actions_preserve_redo_but_new_choice_clears_it (test_action_plan.ActionPlanTests.test_failed_and_empty_actions_preserve_redo_but_new_choice_clears_it) ... ok
+test_folder_plan_export_roundtrip_and_undo_keep_selected_removal_policy (test_action_plan.ActionPlanTests.test_folder_plan_export_roundtrip_and_undo_keep_selected_removal_policy) ... ok
+test_invalid_import_does_not_change_current_intentions (test_action_plan.ActionPlanTests.test_invalid_import_does_not_change_current_intentions) ... ok
+test_invalid_selection_and_replacement_source_do_not_change_intentions (test_action_plan.ActionPlanTests.test_invalid_selection_and_replacement_source_do_not_change_intentions) ... ok
+test_keep_both_skips_pair_and_retains_files (test_action_plan.ActionPlanTests.test_keep_both_skips_pair_and_retains_files) ... ok
+test_keep_checked_files_is_a_single_global_undoable_decision (test_action_plan.ActionPlanTests.test_keep_checked_files_is_a_single_global_undoable_decision) ... ok
+test_multiple_undo_redo_restore_mixed_decisions_in_order (test_action_plan.ActionPlanTests.test_multiple_undo_redo_restore_mixed_decisions_in_order) ... ok
+test_one_source_cannot_move_into_two_slots (test_action_plan.ActionPlanTests.test_one_source_cannot_move_into_two_slots) ... ok
+test_pair_remove_both_advances_to_remaining_files (test_action_plan.ActionPlanTests.test_pair_remove_both_advances_to_remaining_files) ... ok
+test_removal_is_global_and_next_comparison_uses_winner (test_action_plan.ActionPlanTests.test_removal_is_global_and_next_comparison_uses_winner) ... ok
+test_remove_both_cannot_leave_replacement_without_source (test_action_plan.ActionPlanTests.test_remove_both_cannot_leave_replacement_without_source) ... ok
+test_remove_previous_replacement_source_retargets_intention (test_action_plan.ActionPlanTests.test_remove_previous_replacement_source_retargets_intention) ... ok
+test_remove_selected_only_changes_checked_files_and_undoes_once (test_action_plan.ActionPlanTests.test_remove_selected_only_changes_checked_files_and_undoes_once) ... ok
+test_remove_selection_can_cover_entire_active_group (test_action_plan.ActionPlanTests.test_remove_selection_can_cover_entire_active_group) ... ok
+test_replacement_chain_preserves_sorted_slot (test_action_plan.ActionPlanTests.test_replacement_chain_preserves_sorted_slot) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.088s
+
+OK
+
+=== test_alignment ===
+test_candidate_projections_are_distance_lower_bounds (test_alignment.AlignmentTests.test_candidate_projections_are_distance_lower_bounds) ... ok
+test_known_subpixel_translation_is_recovered (test_alignment.AlignmentTests.test_known_subpixel_translation_is_recovered) ... ok
+test_local_change_is_not_removed_by_global_translation (test_alignment.AlignmentTests.test_local_change_is_not_removed_by_global_translation) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.131s
+
+OK
+
+=== test_app_ui ===
+test_apply_button_checks_snapshot_in_background_then_saves_checkpoint (test_app_ui.AppUiTests.test_apply_button_checks_snapshot_in_background_then_saves_checkpoint) ... ok
+test_arrow_actions_ignore_loading_and_allow_navigation_in_settings (test_app_ui.AppUiTests.test_arrow_actions_ignore_loading_and_allow_navigation_in_settings) ... This plugin does not support propagateSizeHints()
+ok
+test_arrow_keys_animate_buttons_advance_groups_and_undo_across_transitions (test_app_ui.AppUiTests.test_arrow_keys_animate_buttons_advance_groups_and_undo_across_transitions) ... ok
+test_cancelled_apply_returns_to_plan_without_losing_decisions (test_app_ui.AppUiTests.test_cancelled_apply_returns_to_plan_without_losing_decisions) ... ok
+test_cancelled_deferred_apply_close_consumes_the_close_flag (test_app_ui.AppUiTests.test_cancelled_deferred_apply_close_consumes_the_close_flag) ... ok
+test_cancelled_deferred_scan_close_does_not_close_the_next_scan (test_app_ui.AppUiTests.test_cancelled_deferred_scan_close_does_not_close_the_next_scan) ... ok
+test_card_actions_are_one_row_with_transfer_between_delete_and_keep (test_app_ui.AppUiTests.test_card_actions_are_one_row_with_transfer_between_delete_and_keep) ... ok
+test_card_date_reason_fits_small_window_with_exif_without_overlap (test_app_ui.AppUiTests.test_card_date_reason_fits_small_window_with_exif_without_overlap) ... ok
+test_card_reasons_use_group_ranking_and_update_after_settings_change (test_app_ui.AppUiTests.test_card_reasons_use_group_ranking_and_update_after_settings_change) ... ok
+test_checked_deletions_delete_both_and_unwanted_group_are_undoable (test_app_ui.AppUiTests.test_checked_deletions_delete_both_and_unwanted_group_are_undoable) ... ok
+test_close_confirmation_is_russian_and_cancel_preserves_progress (test_app_ui.AppUiTests.test_close_confirmation_is_russian_and_cancel_preserves_progress) ... ok
+test_column_sorting_uses_typed_values_and_keeps_file_identity (test_app_ui.AppUiTests.test_column_sorting_uses_typed_values_and_keeps_file_identity) ... ok
+test_delete_card_is_disabled_while_preview_is_loading_and_without_model (test_app_ui.AppUiTests.test_delete_card_is_disabled_while_preview_is_loading_and_without_model) ... ok
+test_delete_card_only_removes_that_file_without_keeping_the_other (test_app_ui.AppUiTests.test_delete_card_only_removes_that_file_without_keeping_the_other) ... ok
+test_empty_result_has_no_active_comparison (test_app_ui.AppUiTests.test_empty_result_has_no_active_comparison) ... ok
+test_failed_apply_checkpoint_does_not_discard_pending_decisions (test_app_ui.AppUiTests.test_failed_apply_checkpoint_does_not_discard_pending_decisions) ... ok
+test_failed_saved_apply_can_be_retried_after_rollback (test_app_ui.AppUiTests.test_failed_saved_apply_can_be_retried_after_rollback) ... ok
+test_finished_group_and_final_outcome_do_not_show_empty_photo_frames (test_app_ui.AppUiTests.test_finished_group_and_final_outcome_do_not_show_empty_photo_frames) ... ok
+test_history_icons_return_to_exact_pair_across_groups_and_resume_redo (test_app_ui.AppUiTests.test_history_icons_return_to_exact_pair_across_groups_and_resume_redo) ... ok
+test_initial_reference_uses_rule_priority_and_advice_has_a_subtle_marker (test_app_ui.AppUiTests.test_initial_reference_uses_rule_priority_and_advice_has_a_subtle_marker) ... ok
+test_long_paths_wrap_and_both_photo_grids_keep_matching_fields (test_app_ui.AppUiTests.test_long_paths_wrap_and_both_photo_grids_keep_matching_fields) ... ok
+test_new_comparison_can_cancel_or_save_then_restore_previous_progress (test_app_ui.AppUiTests.test_new_comparison_can_cancel_or_save_then_restore_previous_progress) ... ok
+test_original_opens_full_source_path_and_settings_persist_without_actions (test_app_ui.AppUiTests.test_original_opens_full_source_path_and_settings_persist_without_actions) ... ok
+test_plan_is_separate_screen_and_restores_after_restart (test_app_ui.AppUiTests.test_plan_is_separate_screen_and_restores_after_restart) ... ok
+test_primary_action_uses_one_checkbox_and_not_the_highlighted_row (test_app_ui.AppUiTests.test_primary_action_uses_one_checkbox_and_not_the_highlighted_row) ... ok
+test_project_restores_virtual_move_current_pair_and_open_exif_without_scan (test_app_ui.AppUiTests.test_project_restores_virtual_move_current_pair_and_open_exif_without_scan) ... ok
+test_read_errors_are_visible_without_groups_and_survive_save (test_app_ui.AppUiTests.test_read_errors_are_visible_without_groups_and_survive_save) ... Indexed 1/1, cached=0, errors=1
+Done: 0 copy candidates, 0 similar-frame pairs, 0 review groups
+Exported 0 groups, 0 files, 0 pairs to /private/var/folders/2s/vty41l455yv698g4xkgfv7z00000gn/T/v2_ui_read_errors_2od3ndpi/state/runs/20261112-083348-e3dd78/review
+Indexed 2/2, cached=1, errors=1
+Queried 1/1, candidates=0, matches=0
+Done: 0 copy candidates, 0 similar-frame pairs, 0 review groups
+Exported 0 groups, 0 files, 0 pairs to /private/var/folders/2s/vty41l455yv698g4xkgfv7z00000gn/T/v2_ui_read_errors_5_leterf/state/runs/20261112-083348-195f06/review
+Indexed 3/3, cached=2, errors=1
+Queried 2/2, candidates=1, matches=1
+Done: 1 copy candidates, 0 similar-frame pairs, 1 review groups
+ok
+test_real_apply_updates_project_and_hides_completed_group_only_after_apply (test_app_ui.AppUiTests.test_real_apply_updates_project_and_hides_completed_group_only_after_apply) ... ok
+test_reference_starts_at_sorted_first_file_and_follows_the_survivor (test_app_ui.AppUiTests.test_reference_starts_at_sorted_first_file_and_follows_the_survivor) ... ok
+test_removal_folder_settings_update_ui_apply_and_saved_comparison (test_app_ui.AppUiTests.test_removal_folder_settings_update_ui_apply_and_saved_comparison) ... ok
+test_save_click_writes_progress_without_changing_pair_or_photo_geometry (test_app_ui.AppUiTests.test_save_click_writes_progress_without_changing_pair_or_photo_geometry) ... ok
+test_save_stays_in_place_and_comparison_toolbar_is_compact (test_app_ui.AppUiTests.test_save_stays_in_place_and_comparison_toolbar_is_compact) ... ok
+test_scan_error_is_inline_and_sources_remain_available (test_app_ui.AppUiTests.test_scan_error_is_inline_and_sources_remain_available) ... ok
+test_scan_global_choices_undo_and_simulated_apply (test_app_ui.AppUiTests.test_scan_global_choices_undo_and_simulated_apply) ... Exported 1 groups, 2 files, 1 pairs to /private/var/folders/2s/vty41l455yv698g4xkgfv7z00000gn/T/v2_ui_read_errors_9dzahp7u/state/runs/20261112-083349-9bf53c/review
+Indexed 3/3, cached=3, errors=0
+Queried 3/3, candidates=3, matches=3
+Done: 3 copy candidates, 0 similar-frame pairs, 1 review groups
+ok
+test_setup_operation_and_review_show_only_relevant_controls (test_app_ui.AppUiTests.test_setup_operation_and_review_show_only_relevant_controls) ... Exported 1 groups, 3 files, 3 pairs to /private/var/folders/2s/vty41l455yv698g4xkgfv7z00000gn/T/v2_ui_sf5jh_7y/state/runs/20261112-083351-344137/review
+Indexed 2/2, cached=2, errors=0
+Queried 2/2, candidates=1, matches=1
+Done: 1 copy candidates, 0 similar-frame pairs, 1 review groups
+ok
+test_skip_advances_without_a_completion_screen_and_resume_stays_on_next_pair (test_app_ui.AppUiTests.test_skip_advances_without_a_completion_screen_and_resume_stays_on_next_pair) ... ok
+test_stopped_scan_keeps_old_review_and_has_a_clear_way_back (test_app_ui.AppUiTests.test_stopped_scan_keeps_old_review_and_has_a_clear_way_back) ... ok
+test_system_theme_changes_live_and_full_exif_shows_both_files (test_app_ui.AppUiTests.test_system_theme_changes_live_and_full_exif_shows_both_files) ... ok
+
+----------------------------------------------------------------------
+Ran 38 tests in 17.486s
+
+OK
+Exported 1 groups, 2 files, 1 pairs to /private/var/folders/2s/vty41l455yv698g4xkgfv7z00000gn/T/v2_phases_scan_hk5_s42c/state/runs/20261112-083351-0e01f5/review
+
+=== test_execution ===
+test_abrupt_process_exit_after_recycling_releases_lock_and_recovers (test_execution.ExecutionTests.test_abrupt_process_exit_after_recycling_releases_lock_and_recovers) ... ok
+test_an_active_transaction_cannot_be_recovered_or_applied_again (test_execution.ExecutionTests.test_an_active_transaction_cannot_be_recovered_or_applied_again) ... ok
+test_cancel_after_recycle_rolls_back_the_whole_batch (test_execution.ExecutionTests.test_cancel_after_recycle_rolls_back_the_whole_batch) ... ok
+test_changed_source_or_destination_blocks_all_changes (test_execution.ExecutionTests.test_changed_source_or_destination_blocks_all_changes) ... ok
+test_copy_fallback_preserves_bytes_and_file_times (test_execution.ExecutionTests.test_copy_fallback_preserves_bytes_and_file_times) ... ok
+test_crash_after_recycle_before_return_recovers_without_recycled_path (test_execution.ExecutionTests.test_crash_after_recycle_before_return_recovers_without_recycled_path) ... ok
+test_crash_before_checkpoint_restores_all_staged_and_placed_files (test_execution.ExecutionTests.test_crash_before_checkpoint_restores_all_staged_and_placed_files) ... ok
+test_direct_move_verifies_expected_bytes_before_rename (test_execution.ExecutionTests.test_direct_move_verifies_expected_bytes_before_rename) ... ok
+test_exclusion_starts_before_preflight_and_rejects_stale_model (test_execution.ExecutionTests.test_exclusion_starts_before_preflight_and_rejects_stale_model) ... ok
+test_failed_checkpoint_restores_identical_full_copies_at_both_paths (test_execution.ExecutionTests.test_failed_checkpoint_restores_identical_full_copies_at_both_paths) ... ok
+test_failed_checkpoint_rolls_back_files_and_keeps_pending_project (test_execution.ExecutionTests.test_failed_checkpoint_rolls_back_files_and_keeps_pending_project) ... ok
+test_failed_final_placement_restores_recycled_target (test_execution.ExecutionTests.test_failed_final_placement_restores_recycled_target) ... ok
+test_failed_recycle_restores_staged_source_and_original_target (test_execution.ExecutionTests.test_failed_recycle_restores_staged_source_and_original_target) ... ok
+test_folder_cancel_after_placement_restores_the_whole_batch (test_execution.ExecutionTests.test_folder_cancel_after_placement_restores_the_whole_batch) ... ok
+test_folder_copy_fallback_crash_recovers_using_the_new_file_identity (test_execution.ExecutionTests.test_folder_copy_fallback_crash_recovers_using_the_new_file_identity) ... ok
+test_folder_copy_fallback_preserves_bytes_times_and_tracks_identity (test_execution.ExecutionTests.test_folder_copy_fallback_preserves_bytes_times_and_tracks_identity) ... ok
+test_folder_crash_after_move_before_journal_update_recovers (test_execution.ExecutionTests.test_folder_crash_after_move_before_journal_update_recovers) ... ok
+test_folder_failed_checkpoint_restores_all_files_and_clears_folder (test_execution.ExecutionTests.test_folder_failed_checkpoint_restores_all_files_and_clears_folder) ... ok
+test_folder_policy_applies_replacement_and_removal_without_recycling (test_execution.ExecutionTests.test_folder_policy_applies_replacement_and_removal_without_recycling) ... ok
+test_folder_policy_disambiguates_names_without_overwriting_existing_files (test_execution.ExecutionTests.test_folder_policy_disambiguates_names_without_overwriting_existing_files) ... ok
+test_folder_racing_collision_with_identical_bytes_preserves_foreign_file (test_execution.ExecutionTests.test_folder_racing_collision_with_identical_bytes_preserves_foreign_file) ... ok
+test_interrupted_staging_is_recovered_when_loading_comparison (test_execution.ExecutionTests.test_interrupted_staging_is_recovered_when_loading_comparison) ... ok
+test_old_virtual_checkpoints_become_pending_real_changes (test_execution.ExecutionTests.test_old_virtual_checkpoints_become_pending_real_changes) ... ok
+test_project_lock_excludes_another_process_during_preflight (test_execution.ExecutionTests.test_project_lock_excludes_another_process_during_preflight) ... ok
+test_replace_and_move_commit_real_paths_and_do_not_repeat_after_reload (test_execution.ExecutionTests.test_replace_and_move_commit_real_paths_and_do_not_repeat_after_reload) ... ok
+test_sources_cannot_be_written_or_substituted_after_hashing (test_execution.ExecutionTests.test_sources_cannot_be_written_or_substituted_after_hashing) ... skipped 'Windows mandatory sharing protection'
+test_switch_from_folder_to_bin_uses_only_the_selected_policy (test_execution.ExecutionTests.test_switch_from_folder_to_bin_uses_only_the_selected_policy) ... ok
+test_unavailable_removal_folder_blocks_all_actions (test_execution.ExecutionTests.test_unavailable_removal_folder_blocks_all_actions) ... ok
+test_windows_backend_returns_a_real_recycled_file (test_execution.ExecutionTests.test_windows_backend_returns_a_real_recycled_file) ... skipped 'Native Windows recycling'
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.543s
+
+OK (skipped=2)
+
+=== test_exif_data ===
+test_large_binary_tag_is_bounded_and_identified (test_exif_data.ExifTests.test_large_binary_tag_is_bounded_and_identified) ... ok
+test_missing_exif_returns_empty_rows (test_exif_data.ExifTests.test_missing_exif_returns_empty_rows) ... ok
+test_root_and_nested_ifd_are_read_with_compatible_keys_for_both_files (test_exif_data.ExifTests.test_root_and_nested_ifd_are_read_with_compatible_keys_for_both_files) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.036s
+
+OK
+
+=== test_features ===
+Matplotlib is building the font cache; this may take a moment.
+test_group_recovery_does_not_require_every_pair (test_features.FeatureTests.test_group_recovery_does_not_require_every_pair) ... ok
+test_square_quarter_turn_and_pair_order (test_features.FeatureTests.test_square_quarter_turn_and_pair_order) ... ok
+test_weighted_dice_has_valid_normalization (test_features.FeatureTests.test_weighted_dice_has_valid_normalization) ... ok
+test_windows_include_last_valid_position_and_rotate_consistently (test_features.FeatureTests.test_windows_include_last_valid_position_and_rotate_consistently) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.152s
+
+OK
+
+=== test_macos ===
+test_cross_volume_copy_preserves_metadata (test_macos.MacOSTests.test_cross_volume_copy_preserves_metadata) ... ok
+test_edit_after_backup_blocks_native_trash_and_preserves_changed_bytes (test_macos.MacOSTests.test_edit_after_backup_blocks_native_trash_and_preserves_changed_bytes) ... ok
+test_edit_after_preflight_is_detected_before_move (test_macos.MacOSTests.test_edit_after_preflight_is_detected_before_move) ... ok
+test_exclusive_rename_keeps_existing_file_and_symlink (test_macos.MacOSTests.test_exclusive_rename_keeps_existing_file_and_symlink) ... ok
+test_native_trash_returns_actual_recoverable_file (test_macos.MacOSTests.test_native_trash_returns_actual_recoverable_file) ... ok
+test_symlinks_and_substituted_source_are_rejected (test_macos.MacOSTests.test_symlinks_and_substituted_source_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.211s
+
+OK
+
+=== test_pipeline ===
+test_alpha_heic_is_decoded_as_three_channels_and_included_in_search (test_pipeline.PipelineTests.test_alpha_heic_is_decoded_as_three_channels_and_included_in_search) ... ok
+test_cancelled_run_leaves_sources_unchanged (test_pipeline.PipelineTests.test_cancelled_run_leaves_sources_unchanged) ... ok
+test_changed_source_between_comparison_and_export_is_not_published (test_pipeline.PipelineTests.test_changed_source_between_comparison_and_export_is_not_published) ... ok
+test_empty_source_and_invalid_output (test_pipeline.PipelineTests.test_empty_source_and_invalid_output) ... ok
+test_multiple_overlapping_sources_decode_once_then_reuse_cache (test_pipeline.PipelineTests.test_multiple_overlapping_sources_decode_once_then_reuse_cache) ... ok
+test_replaced_file_with_preserved_size_and_mtime_invalidates_cache (test_pipeline.PipelineTests.test_replaced_file_with_preserved_size_and_mtime_invalidates_cache) ... ok
+test_search_modes_expand_pairs_without_losing_strict_results (test_pipeline.PipelineTests.test_search_modes_expand_pairs_without_losing_strict_results) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.217s
+
+OK
+
+=== test_preferences ===
+test_earlier_date_then_camera_then_filled_exif_break_ties (test_preferences.PreferencesTests.test_earlier_date_then_camera_then_filled_exif_break_ties) ... ok
+test_empty_exif_is_not_counted_and_zero_is_valid (test_preferences.PreferencesTests.test_empty_exif_is_not_counted_and_zero_is_valid) ... ok
+test_equal_files_remain_ties_and_do_not_highlight_parameters (test_preferences.PreferencesTests.test_equal_files_remain_ties_and_do_not_highlight_parameters) ... ok
+test_heic_overrides_other_advantages_but_detected_format_overrides_suffix (test_preferences.PreferencesTests.test_heic_overrides_other_advantages_but_detected_format_overrides_suffix) ... ok
+test_highlighting_uses_each_criterion_independently (test_preferences.PreferencesTests.test_highlighting_uses_each_criterion_independently) ... ok
+test_missing_invalid_and_offset_dates (test_preferences.PreferencesTests.test_missing_invalid_and_offset_dates) ... ok
+test_preferences_persist_cpu_order_enabled_rules_and_display_options (test_preferences.PreferencesTests.test_preferences_persist_cpu_order_enabled_rules_and_display_options) ... ok
+test_reasons_distinguish_exif_ties_from_windows_fallback_and_mixed_sources (test_preferences.PreferencesTests.test_reasons_distinguish_exif_ties_from_windows_fallback_and_mixed_sources) ... ok
+test_reasons_do_not_recommend_either_card_when_group_has_a_better_file (test_preferences.PreferencesTests.test_reasons_do_not_recommend_either_card_when_group_has_a_better_file) ... ok
+test_reasons_follow_rule_order_and_show_both_values (test_preferences.PreferencesTests.test_reasons_follow_rule_order_and_show_both_values) ... ok
+test_reasons_for_tied_winners_compare_with_a_losing_group_member (test_preferences.PreferencesTests.test_reasons_for_tied_winners_compare_with_a_losing_group_member) ... ok
+test_reasons_handle_disabled_rules_single_file_and_unknown_dates (test_preferences.PreferencesTests.test_reasons_handle_disabled_rules_single_file_and_unknown_dates) ... ok
+test_removal_folder_and_exclusive_mode_persist_with_safe_legacy_defaults (test_preferences.PreferencesTests.test_removal_folder_and_exclusive_mode_persist_with_safe_legacy_defaults) ... ok
+test_reordering_and_disabling_change_advice (test_preferences.PreferencesTests.test_reordering_and_disabling_change_advice) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.009s
+
+OK
+
+=== test_progress_eta ===
+test_cached_prefix_does_not_inflate_speed_of_uncached_batches (test_progress_eta.ScanETATests.test_cached_prefix_does_not_inflate_speed_of_uncached_batches) ... ok
+test_empty_progress_and_duration_boundaries (test_progress_eta.ScanETATests.test_empty_progress_and_duration_boundaries) ... ok
+test_estimate_refreshes_every_five_seconds_and_forgets_old_rate (test_progress_eta.ScanETATests.test_estimate_refreshes_every_five_seconds_and_forgets_old_rate) ... ok
+test_first_batch_includes_time_already_spent_processing (test_progress_eta.ScanETATests.test_first_batch_includes_time_already_spent_processing) ... ok
+test_no_recent_progress_does_not_keep_a_stale_cached_rate (test_progress_eta.ScanETATests.test_no_recent_progress_does_not_keep_a_stale_cached_rate) ... ok
+test_stage_rate_resets_and_new_scan_does_not_reuse_old_time (test_progress_eta.ScanETATests.test_stage_rate_resets_and_new_scan_does_not_reuse_old_time) ... ok
+test_window_boundary_interpolates_a_partially_overlapping_batch (test_progress_eta.ScanETATests.test_window_boundary_interpolates_a_partially_overlapping_batch) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+OK
+
+=== test_project ===
+test_atomic_save_failure_keeps_previous_project (test_project.ProjectTests.test_atomic_save_failure_keeps_previous_project) ... ok
+test_cancelled_verification_preserves_complete_plan (test_project.ProjectTests.test_cancelled_verification_preserves_complete_plan) ... ok
+test_deletion_supersedes_move_and_undo_restores_both_decisions (test_project.ProjectTests.test_deletion_supersedes_move_and_undo_restores_both_decisions) ... ok
+test_embedded_project_restores_progress_without_review_or_scan (test_project.ProjectTests.test_embedded_project_restores_progress_without_review_or_scan) ... ok
+test_external_destination_collision_can_be_loaded_but_not_applied (test_project.ProjectTests.test_external_destination_collision_can_be_loaded_but_not_applied) ... ok
+test_latest_replacement_supersedes_source_move (test_project.ProjectTests.test_latest_replacement_supersedes_source_move) ... ok
+test_legacy_plan_round_trip_includes_moves (test_project.ProjectTests.test_legacy_plan_round_trip_includes_moves) ... ok
+test_move_changes_only_virtual_location_and_undo_restores_it (test_project.ProjectTests.test_move_changes_only_virtual_location_and_undo_restores_it) ... ok
+test_multiple_checkpoints_and_move_back_to_original_location (test_project.ProjectTests.test_multiple_checkpoints_and_move_back_to_original_location) ... ok
+test_project_cannot_overwrite_source_or_review (test_project.ProjectTests.test_project_cannot_overwrite_source_or_review) ... ok
+test_replace_at_moved_target_and_move_replacement_source (test_project.ProjectTests.test_replace_at_moved_target_and_move_replacement_source) ... ok
+test_replacement_can_be_replaced_again_after_checkpoint (test_project.ProjectTests.test_replacement_can_be_replaced_again_after_checkpoint) ... ok
+test_same_named_files_cannot_move_to_one_destination (test_project.ProjectTests.test_same_named_files_cannot_move_to_one_destination) ... ok
+test_saved_pending_group_stays_but_applied_singleton_disappears (test_project.ProjectTests.test_saved_pending_group_stays_but_applied_singleton_disappears) ... ok
+test_saved_review_restores_both_history_directions_and_old_files_still_load (test_project.ProjectTests.test_saved_review_restores_both_history_directions_and_old_files_still_load) ... ok
+test_source_changed_after_review_blocks_entire_simulation (test_project.ProjectTests.test_source_changed_after_review_blocks_entire_simulation) ... ok
+test_successful_apply_clears_both_history_directions (test_project.ProjectTests.test_successful_apply_clears_both_history_directions) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.108s
+
+OK
+
+=== test_review_model ===
+test_choices_round_trip_without_changing_originals (test_review_model.ReviewModelTests.test_choices_round_trip_without_changing_originals) ... ok
+test_invalid_plan_is_rejected_without_partial_choices (test_review_model.ReviewModelTests.test_invalid_plan_is_rejected_without_partial_choices) ... ok
+test_plan_cannot_overwrite_originals_or_review (test_review_model.ReviewModelTests.test_plan_cannot_overwrite_originals_or_review) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+OK
+
+=== test_review_performance ===
+test_active_group_scrolls_into_view_on_navigation_choice_and_undo (test_review_performance.ReviewPerformanceTests.test_active_group_scrolls_into_view_on_navigation_choice_and_undo) ... ok
+test_changed_destinations_still_reject_disk_collisions (test_review_performance.ReviewPerformanceTests.test_changed_destinations_still_reject_disk_collisions) ... ok
+test_completed_group_refreshes_once_and_leaves_hidden_plan_unbuilt (test_review_performance.ReviewPerformanceTests.test_completed_group_refreshes_once_and_leaves_hidden_plan_unbuilt) ... ok
+test_fast_save_rejects_unknown_existing_file_and_source_hardlink (test_review_performance.ReviewPerformanceTests.test_fast_save_rejects_unknown_existing_file_and_source_hardlink) ... ok
+test_plain_decisions_do_not_query_archive_paths (test_review_performance.ReviewPerformanceTests.test_plain_decisions_do_not_query_archive_paths) ... ok
+test_preview_cache_is_not_execution_allocator (test_review_performance.ReviewPerformanceTests.test_preview_cache_is_not_execution_allocator) ... ok
+test_save_and_close_do_not_resolve_individual_archive_files (test_review_performance.ReviewPerformanceTests.test_save_and_close_do_not_resolve_individual_archive_files) ... ok
+test_two_planned_destinations_with_canonical_alias_are_rejected (test_review_performance.ReviewPerformanceTests.test_two_planned_destinations_with_canonical_alias_are_rejected) ... ok
+test_wordmark_keeps_artwork_and_follows_theme_palette (test_review_performance.ReviewPerformanceTests.test_wordmark_keeps_artwork_and_follows_theme_palette) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.380s
+
+OK
+
+=== test_scan ===
+test_cache_reuse_invalidation_and_read_only_sources (test_scan.ScanTests.test_cache_reuse_invalidation_and_read_only_sources) ... ok
+test_coarse_filter_does_not_lose_close_pairs (test_scan.ScanTests.test_coarse_filter_does_not_lose_close_pairs) ... ok
+test_constant_pixels_at_the_exact_threshold_survive_filter_and_cache (test_scan.ScanTests.test_constant_pixels_at_the_exact_threshold_survive_filter_and_cache) ... ok
+test_existing_coarse_only_database_is_upgraded (test_scan.ScanTests.test_existing_coarse_only_database_is_upgraded) ... ok
+test_float32_bound_accepts_all_exact_thresholds_in_both_indices (test_scan.ScanTests.test_float32_bound_accepts_all_exact_thresholds_in_both_indices) ... ok
+test_persistent_thumbnail_is_lossless (test_scan.ScanTests.test_persistent_thumbnail_is_lossless) ... ok
+test_similar_frames_are_visible_without_merging_copy_groups (test_scan.ScanTests.test_similar_frames_are_visible_without_merging_copy_groups) ... ok
+test_strict_boundary_on_real_pngs_survives_candidate_projection (test_scan.ScanTests.test_strict_boundary_on_real_pngs_survives_candidate_projection) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.145s
+
+OK
+
+=== test_v2 ===
+test_content_decoder_when_opencv_cannot_open_a_file (test_v2.V2Tests.test_content_decoder_when_opencv_cannot_open_a_file) ... ok
+test_empty_folder_is_an_empty_result (test_v2.V2Tests.test_empty_folder_is_an_empty_result) ... ok
+test_l_recovers_grayscale_and_distinguishes_different_structure (test_v2.V2Tests.test_l_recovers_grayscale_and_distinguishes_different_structure) ... ok
+test_packed_tuning_scores_match_pipeline_scores (test_v2.V2Tests.test_packed_tuning_scores_match_pipeline_scores) ... ok
+test_pipeline_uses_l_threshold_and_dense_sparse_agree (test_v2.V2Tests.test_pipeline_uses_l_threshold_and_dense_sparse_agree) ... ok
+test_threshold_fit_uses_recall_and_ignores_empty_maps (test_v2.V2Tests.test_threshold_fit_uses_recall_and_ignores_empty_maps) ... ok
+test_validation_rejects_series_split_between_training_and_validation (test_v2.V2Tests.test_validation_rejects_series_split_between_training_and_validation) ... ok
+test_validation_rejects_source_leakage (test_v2.V2Tests.test_validation_rejects_source_leakage) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.573s
+
+OK
+Module failures: []

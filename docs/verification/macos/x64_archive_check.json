@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "frozen": true,
+  "formats": [
+    "PNG",
+    "JPEG",
+    "HEIC"
+  ],
+  "assets": true,
+  "app": "Attentive Otter",
+  "version": "1.0 BETA",
+  "about": true,
+  "license": true,
+  "wordmark": true,
+  "scan_files": 3,
+  "groups": 1,
+  "recommendation_reasons": true,
+  "compact_cards": true,
+  "save_button": true,
+  "save_button_feedback": true,
+  "individual_delete": true,
+  "recycle_apply": true,
+  "folder_apply": true,
+  "folder_resume": true,
+  "real_apply": true,
+  "resume": true,
+  "console": false
+}

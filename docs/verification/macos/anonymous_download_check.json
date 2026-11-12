@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "url": "https://github.com/AlexSmart1982/attentive-otter/releases/tag/v1.0.0-beta.2",
+  "assets": [
+    "Attentive_Otter_1.0_BETA_2_macOS_arm64.zip",
+    "Attentive_Otter_1.0_BETA_2_macOS_Corresponding_Source_arm64.zip",
+    "Attentive_Otter_1.0_BETA_2_macOS_Corresponding_Source_x64.zip",
+    "Attentive_Otter_1.0_BETA_2_macOS_x64.zip",
+    "SHA256SUMS.txt"
+  ]
+}

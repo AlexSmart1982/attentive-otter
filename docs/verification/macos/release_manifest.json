@@ -1,0 +1,30 @@
+{
+  "run": 43183695772,
+  "commit": "15ceb719c8d2468ebc1e5462542ad34275a37e36",
+  "archives": [
+    {
+      "file": "Attentive_Otter_1.0_BETA_2_macOS_arm64.zip",
+      "bytes": 63784103,
+      "sha256": "3d82c390eef79f1aaea0c5ce0f464c0ff0ef5931cf96ee3fd97e2e7729c00976",
+      "architecture": "arm64"
+    },
+    {
+      "file": "Attentive_Otter_1.0_BETA_2_macOS_Corresponding_Source_arm64.zip",
+      "bytes": 363909488,
+      "sha256": "bdf588008cfe7d40caf106fc5e896b0a8d065d13341ce9ef8bd9db58856bdaee",
+      "architecture": "arm64"
+    },
+    {
+      "file": "Attentive_Otter_1.0_BETA_2_macOS_Corresponding_Source_x64.zip",
+      "bytes": 363904894,
+      "sha256": "3258b707d542c4acc88204d814a445216038d7649caebd32fcd8d2d47df50ff2",
+      "architecture": "x64"
+    },
+    {
+      "file": "Attentive_Otter_1.0_BETA_2_macOS_x64.zip",
+      "bytes": 73606380,
+      "sha256": "c7cd932234c596d2d6278aa6ee14ba045de78605a0d262b9edb976b62c68d143",
+      "architecture": "x64"
+    }
+  ]
+}

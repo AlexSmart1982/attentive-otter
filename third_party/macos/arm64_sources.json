@@ -1,0 +1,305 @@
+{
+  "archives": [
+    {
+      "component": "PyQt5",
+      "version": "5.15.11",
+      "file": "PyQt5-5.15.11.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/0e/07/c9ed0bd428df6f87183fca565a79fee19fa7c88c7f00a7f011ab4379e77a/PyQt5-5.15.11.tar.gz",
+      "expected_sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52",
+      "sha256": "fda45743ebb4a27b4b1a51c6d8ef455c4c1b5d610c90d2934c7802b5c1557c52",
+      "bytes": 3216775
+    },
+    {
+      "component": "PyQt5-sip",
+      "version": "12.17.1",
+      "file": "pyqt5_sip-12.17.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ea/08/88a20c862f40b5c178c517cdc7e93767967dec5ac1b994e226d517991c9b/pyqt5_sip-12.17.1.tar.gz",
+      "expected_sha256": "0eab72bcb628f1926bf5b9ac51259d4fa18e8b2a81d199071135458f7d087ea8",
+      "sha256": "0eab72bcb628f1926bf5b9ac51259d4fa18e8b2a81d199071135458f7d087ea8",
+      "bytes": 104136
+    },
+    {
+      "component": "numpy",
+      "version": "2.2.6",
+      "file": "numpy-2.2.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/76/21/7d2a95e4bba9dc13d043ee156a356c0a8f0c6309dff6b21b4d71a073b8a8/numpy-2.2.6.tar.gz",
+      "expected_sha256": "e29554e2bef54a90aa5cc07da6ce955accb83f21ab5de01a62c8478897b264fd",
+      "sha256": "e29554e2bef54a90aa5cc07da6ce955accb83f21ab5de01a62c8478897b264fd",
+      "bytes": 20276440
+    },
+    {
+      "component": "scipy",
+      "version": "1.16.2",
+      "file": "scipy-1.16.2.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/4c/3b/546a6f0bfe791bbb7f8d591613454d15097e53f906308ec6f7c1ce588e8e/scipy-1.16.2.tar.gz",
+      "expected_sha256": "af029b153d243a80afb6eabe40b0a07f8e35c9adc269c019f364ad747f826a6b",
+      "sha256": "af029b153d243a80afb6eabe40b0a07f8e35c9adc269c019f364ad747f826a6b",
+      "bytes": 30580599
+    },
+    {
+      "component": "opencv-python",
+      "version": "4.12.0.88",
+      "file": "opencv-python-4.12.0.88.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/ac/71/25c98e634b6bdeca4727c7f6d6927b056080668c5008ad3c8fc9e7f8f6ec/opencv-python-4.12.0.88.tar.gz",
+      "expected_sha256": "8b738389cede219405f6f3880b851efa3415ccd674752219377353f017d2994d",
+      "sha256": "8b738389cede219405f6f3880b851efa3415ccd674752219377353f017d2994d",
+      "bytes": 95373294
+    },
+    {
+      "component": "Pillow",
+      "version": "11.3.0",
+      "file": "pillow-11.3.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/f3/0d/d0d6dea55cd152ce3d6767bb38a8fc10e33796ba4ba210cbab9354b6d238/pillow-11.3.0.tar.gz",
+      "expected_sha256": "3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523",
+      "sha256": "3828ee7586cd0b2091b6209e5ad53e20d0649bbe87164a459d0676e035e8f523",
+      "bytes": 47113069
+    },
+    {
+      "component": "pillow-heif",
+      "version": "1.1.1",
+      "file": "pillow_heif-1.1.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/64/65/77284daf2a8a2849b9040889bd8e1b845e693ed97973a28ba2122b8922ad/pillow_heif-1.1.1.tar.gz",
+      "expected_sha256": "f60e8c8a8928556104cec4fff39d43caa1da105625bdb53b11ce3c89d09b6bde",
+      "sha256": "f60e8c8a8928556104cec4fff39d43caa1da105625bdb53b11ce3c89d09b6bde",
+      "bytes": 18271952
+    },
+    {
+      "component": "piexif",
+      "version": "1.1.3",
+      "file": "piexif-1.1.3.zip",
+      "url": "https://files.pythonhosted.org/packages/fa/84/a3f25cec7d0922bf60be8000c9739d28d24b6896717f44cc4cfb843b1487/piexif-1.1.3.zip",
+      "expected_sha256": "83cb35c606bf3a1ea1a8f0a25cb42cf17e24353fd82e87ae3884e74a302a5f1b",
+      "sha256": "83cb35c606bf3a1ea1a8f0a25cb42cf17e24353fd82e87ae3884e74a302a5f1b",
+      "bytes": 1011134
+    },
+    {
+      "component": "psutil",
+      "version": "7.1.0",
+      "file": "psutil-7.1.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/b3/31/4723d756b59344b643542936e37a31d1d3204bcdc42a7daa8ee9eb06fb50/psutil-7.1.0.tar.gz",
+      "expected_sha256": "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2",
+      "sha256": "655708b3c069387c8b77b072fc429a57d0e214221d01c0a772df7dfedcb3bcd2",
+      "bytes": 497660
+    },
+    {
+      "component": "PyInstaller",
+      "version": "6.16.0",
+      "file": "pyinstaller-6.16.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/94/94/1f62e95e4a28b64cfbb5b922ef3046f968b47170d37a1e1a029f56ac9cb4/pyinstaller-6.16.0.tar.gz",
+      "expected_sha256": "53559fe1e041a234f2b4dcc3288ea8bdd57f7cad8a6644e422c27bb407f3edef",
+      "sha256": "53559fe1e041a234f2b4dcc3288ea8bdd57f7cad8a6644e422c27bb407f3edef",
+      "bytes": 4008473
+    },
+    {
+      "component": "pyinstaller-hooks-contrib",
+      "version": "2025.9",
+      "file": "pyinstaller_hooks_contrib-2025.9.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/7d/83/be0f57c0b77b66c33c2283ebd4ea341022b5a743e97c5fb3bebab82b38b9/pyinstaller_hooks_contrib-2025.9.tar.gz",
+      "expected_sha256": "56e972bdaad4e9af767ed47d132362d162112260cbe488c9da7fee01f228a5a6",
+      "sha256": "56e972bdaad4e9af767ed47d132362d162112260cbe488c9da7fee01f228a5a6",
+      "bytes": 165189
+    },
+    {
+      "component": "pyobjc-core",
+      "version": "11.1",
+      "file": "pyobjc_core-11.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/e8/e9/0b85c81e2b441267bca707b5d89f56c2f02578ef8f3eafddf0e0c0b8848c/pyobjc_core-11.1.tar.gz",
+      "expected_sha256": "b63d4d90c5df7e762f34739b39cc55bc63dbcf9fb2fb3f2671e528488c7a87fe",
+      "sha256": "b63d4d90c5df7e762f34739b39cc55bc63dbcf9fb2fb3f2671e528488c7a87fe",
+      "bytes": 974602
+    },
+    {
+      "component": "pyobjc-framework-Cocoa",
+      "version": "11.1",
+      "file": "pyobjc_framework_cocoa-11.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/4b/c5/7a866d24bc026f79239b74d05e2cf3088b03263da66d53d1b4cf5207f5ae/pyobjc_framework_cocoa-11.1.tar.gz",
+      "expected_sha256": "87df76b9b73e7ca699a828ff112564b59251bb9bbe72e610e670a4dc9940d038",
+      "sha256": "87df76b9b73e7ca699a828ff112564b59251bb9bbe72e610e670a4dc9940d038",
+      "bytes": 5565335
+    },
+    {
+      "component": "altgraph",
+      "version": "0.17.4",
+      "file": "altgraph-0.17.4.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/de/a8/7145824cf0b9e3c28046520480f207df47e927df83aa9555fb47f8505922/altgraph-0.17.4.tar.gz",
+      "expected_sha256": "1b5afbb98f6c4dcadb2e2ae6ab9fa994bbb8c1d75f4fa96d340f9437ae454406",
+      "sha256": "1b5afbb98f6c4dcadb2e2ae6ab9fa994bbb8c1d75f4fa96d340f9437ae454406",
+      "bytes": 48418
+    },
+    {
+      "component": "macholib",
+      "version": "1.16.3",
+      "file": "macholib-1.16.3.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/95/ee/af1a3842bdd5902ce133bd246eb7ffd4375c38642aeb5dc0ae3a0329dfa2/macholib-1.16.3.tar.gz",
+      "expected_sha256": "07ae9e15e8e4cd9a788013d81f5908b3609aa76f9b1421bae9c4d7606ec86a30",
+      "sha256": "07ae9e15e8e4cd9a788013d81f5908b3609aa76f9b1421bae9c4d7606ec86a30",
+      "bytes": 59309
+    },
+    {
+      "component": "packaging",
+      "version": "25.0",
+      "file": "packaging-25.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz",
+      "expected_sha256": "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f",
+      "sha256": "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f",
+      "bytes": 165727
+    },
+    {
+      "component": "setuptools",
+      "version": "80.9.0",
+      "file": "setuptools-80.9.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/18/5d/3bf57dcd21979b887f014ea83c24ae194cfcd12b9e0fda66b957c69d1fca/setuptools-80.9.0.tar.gz",
+      "expected_sha256": "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c",
+      "sha256": "f36b47402ecde768dbfafc46e8e4207b4360c654f1f3bb84475f0a28628fb19c",
+      "bytes": 1319958
+    },
+    {
+      "component": "wheel",
+      "version": "0.45.1",
+      "file": "wheel-0.45.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/8a/98/2d9906746cdc6a6ef809ae6338005b3f21bb568bea3165cfc6a243fdc25c/wheel-0.45.1.tar.gz",
+      "expected_sha256": "661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729",
+      "sha256": "661e1abd9198507b1409a20c02106d9670b2576e916d58f520316666abca6729",
+      "bytes": 107545
+    },
+    {
+      "component": "scikit-build",
+      "version": "0.18.1",
+      "file": "scikit_build-0.18.1.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/56/54/2beb41f3fcddb4ea238634c6c23fe93115090d8799a45f626a83e6934c16/scikit_build-0.18.1.tar.gz",
+      "expected_sha256": "a4152ac5a084d499c28a7797be0628d8366c336e2fb0e1a063eb32e55efcb8e7",
+      "sha256": "a4152ac5a084d499c28a7797be0628d8366c336e2fb0e1a063eb32e55efcb8e7",
+      "bytes": 274171
+    },
+    {
+      "component": "cmake",
+      "version": "3.31.6",
+      "file": "cmake-3.31.6.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/00/95/ed1ad3763da30c963a941d3c641c9ec9f1397742407a3ab00f94263a5d9d/cmake-3.31.6.tar.gz",
+      "expected_sha256": "8edddfbf367fa1bcf4b9f3064470bc0e1022f70609c0cf69c863961897826205",
+      "sha256": "8edddfbf367fa1bcf4b9f3064470bc0e1022f70609c0cf69c863961897826205",
+      "bytes": 34370
+    },
+    {
+      "component": "ninja",
+      "version": "1.11.1.4",
+      "file": "ninja-1.11.1.4.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/95/d4/6b0324541018561c5e73e617bd16f20a4fc17d1179bb3b3520b6ca8beb7b/ninja-1.11.1.4.tar.gz",
+      "expected_sha256": "6aa39f6e894e0452e5b297327db00019383ae55d5d9c57c73b04f13bf79d438a",
+      "sha256": "6aa39f6e894e0452e5b297327db00019383ae55d5d9c57c73b04f13bf79d438a",
+      "bytes": 201256
+    },
+    {
+      "component": "qtbase",
+      "version": "5.15.17",
+      "file": "qtbase-everywhere-opensource-src-5.15.17.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.17/submodules/qtbase-everywhere-opensource-src-5.15.17.tar.xz",
+      "expected_sha256": "db1513cbb3f4a5bd2229f759c0839436f7fe681a800ff2bc34c4960b09e756ff",
+      "sha256": "db1513cbb3f4a5bd2229f759c0839436f7fe681a800ff2bc34c4960b09e756ff",
+      "bytes": 51429880
+    },
+    {
+      "component": "qtdeclarative",
+      "version": "5.15.17",
+      "file": "qtdeclarative-everywhere-opensource-src-5.15.17.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.17/submodules/qtdeclarative-everywhere-opensource-src-5.15.17.tar.xz",
+      "expected_sha256": "e1cd2d5d7e8de7b83156caae9b41f2be8b42d93414fe8d705212cda10c64d5da",
+      "sha256": "e1cd2d5d7e8de7b83156caae9b41f2be8b42d93414fe8d705212cda10c64d5da",
+      "bytes": 21603892
+    },
+    {
+      "component": "qtimageformats",
+      "version": "5.15.17",
+      "file": "qtimageformats-everywhere-opensource-src-5.15.17.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.17/submodules/qtimageformats-everywhere-opensource-src-5.15.17.tar.xz",
+      "expected_sha256": "4318e249887894725df96fdf0a8fa267d00dd09d10e1ef7c26842e118436ced1",
+      "sha256": "4318e249887894725df96fdf0a8fa267d00dd09d10e1ef7c26842e118436ced1",
+      "bytes": 1902916
+    },
+    {
+      "component": "qtsvg",
+      "version": "5.15.17",
+      "file": "qtsvg-everywhere-opensource-src-5.15.17.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.17/submodules/qtsvg-everywhere-opensource-src-5.15.17.tar.xz",
+      "expected_sha256": "750ad4cd70c0e739d2cdfb9b18ea57211fcb2af1116771131858f35956a31e6c",
+      "sha256": "750ad4cd70c0e739d2cdfb9b18ea57211fcb2af1116771131858f35956a31e6c",
+      "bytes": 1882604
+    },
+    {
+      "component": "qtwebsockets",
+      "version": "5.15.17",
+      "file": "qtwebsockets-everywhere-opensource-src-5.15.17.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.17/submodules/qtwebsockets-everywhere-opensource-src-5.15.17.tar.xz",
+      "expected_sha256": "ccc4d0012bad39787592e8a8665bda8d46057fb5008fe63995b0cda5f632cb85",
+      "sha256": "ccc4d0012bad39787592e8a8665bda8d46057fb5008fe63995b0cda5f632cb85",
+      "bytes": 254836
+    },
+    {
+      "component": "qtmacextras",
+      "version": "5.15.17",
+      "file": "qtmacextras-everywhere-opensource-src-5.15.17.tar.xz",
+      "url": "https://download.qt.io/archive/qt/5.15/5.15.17/submodules/qtmacextras-everywhere-opensource-src-5.15.17.tar.xz",
+      "expected_sha256": "5af08d49ac037e3fcccbbfd4bc6ba9b462c69d867a22dcd5d70e5ada94ce46a4",
+      "sha256": "5af08d49ac037e3fcccbbfd4bc6ba9b462c69d867a22dcd5d70e5ada94ce46a4",
+      "bytes": 65324
+    },
+    {
+      "component": "CPython",
+      "version": "3.13.8",
+      "file": "Python-3.13.8.tar.xz",
+      "url": "https://www.python.org/ftp/python/3.13.8/Python-3.13.8.tar.xz",
+      "sha256": "b9910730526b298299b46b35595ced9055722df60c06ad6301f6a4e2c728a252",
+      "bytes": 22681576
+    },
+    {
+      "component": "pillow-heif-build-recipes",
+      "version": "1.1.1",
+      "file": "pillow-heif-v1.1.1-upstream.tar.gz",
+      "url": "https://codeload.github.com/bigcat88/pillow_heif/tar.gz/refs/tags/v1.1.1",
+      "sha256": "30002bb1dabc6c020369defcc2dfb5879b0c0621e999668976e232326d3f4452",
+      "bytes": 27745219
+    },
+    {
+      "component": "libheif",
+      "version": "1.20.2",
+      "file": "libheif-1.20.2.tar.gz",
+      "url": "https://github.com/strukturag/libheif/releases/download/v1.20.2/libheif-1.20.2.tar.gz",
+      "sha256": "68ac9084243004e0ef3633f184eeae85d615fe7e4444373a0a21cebccae9d12a",
+      "bytes": 1787518
+    },
+    {
+      "component": "libde265",
+      "version": "1.0.16",
+      "file": "libde265-1.0.16.tar.gz",
+      "url": "https://github.com/strukturag/libde265/releases/download/v1.0.16/libde265-1.0.16.tar.gz",
+      "sha256": "b92beb6b53c346db9a8fae968d686ab706240099cdd5aff87777362d668b0de7",
+      "bytes": 835657
+    },
+    {
+      "component": "x265",
+      "version": "4.1+1-1d117be",
+      "file": "x265-1d117be.tar.gz",
+      "url": "https://bitbucket.org/multicoreware/x265_git/get/1d117be.tar.gz",
+      "sha256": "7d23cdcdbd510728202c0dfbf7c51eda26a395de2096c504c2b10d6035711102",
+      "bytes": 1726307
+    }
+  ],
+  "heif_runtime": {
+    "libheif": "1.20.2",
+    "HEIF": "x265 HEVC encoder (4.1+1-1d117be)",
+    "AVIF": "",
+    "encoders": {
+      "x265": "x265 HEVC encoder (4.1+1-1d117be)",
+      "mask": "mask"
+    },
+    "decoders": {
+      "libde265": "libde265 HEVC decoder, version 1.0.16"
+    }
+  },
+  "qt_runtime": "5.15.17",
+  "opencv_wheel": {
+    "file": "opencv_python-4.12.0.88-cp313-cp313-macosx_14_0_arm64.whl",
+    "sha256": "af8e568928cb184e6592debb0abb7c5ce796e6f5497e0052a005507133e5d28e"
+  },
+  "opencv_build_recipe": "build_macos_opencv.py"
+}
